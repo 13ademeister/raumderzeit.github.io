@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.main-image {
+.image-container {
   max-width: 95%;
   max-height: 95%;
 
@@ -17,9 +17,19 @@
   height: 100%;
 }
 
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+}
+
 .item {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  border: 1px green solid;
+  top: 38%;
+  left: 5%;
+  max-height: 50%;
+  max-width: 20%;
+  width: 100%;
+  height: 100%;
 }
