@@ -1,8 +1,10 @@
-.main {
-  display: flex;
-  height: 100%;
+:host {
   align-items: center;
+  display: flex;
   position: absolute;
-  width: 100%;
-  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #ff00ff;
 }
