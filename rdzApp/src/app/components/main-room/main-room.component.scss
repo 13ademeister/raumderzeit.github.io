@@ -13,37 +13,9 @@
   object-fit: scale-down;
 }
 
-.content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  font-size: clamp(1rem, 3.5vh, 2rem);
-  margin: 10%;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-
-  font-family: futura-bold;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-.text {
-  position: relative;
-  font-size: clamp(1rem, 3.5vh, 2rem);
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 100;
-}
-
-.item {
-  position: absolute;
-  top: 38%;
-  left: 5%;
-  max-height: 50%;
+.lamp {
+  top: 40%;
+  right: 5%;
+  max-height: 33%;
   max-width: 20%;
-  width: 100%;
-  height: 100%;
 }
