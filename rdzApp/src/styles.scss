@@ -14,3 +14,13 @@ h6,
   margin-top: 0;
   // margin-bottom: 0;
 }
+
+@font-face {
+  font-family: futura;
+  src: url(./assets/fonts/Futura-CondensedLight.otf) format("opentype");
+}
+
+@font-face {
+  font-family: futura-bold;
+  src: url("./assets/fonts/Futura Bold font.ttf") format("truetype");
+}
