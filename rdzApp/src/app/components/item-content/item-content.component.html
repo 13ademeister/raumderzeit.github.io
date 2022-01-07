@@ -1,10 +1,12 @@
-<div class="content">
+<div *ngIf="visible && selected" class="content">
   <h2>{{ title }}</h2>
   <div class="text">
     <ng-content></ng-content>
   </div>
 </div>
 <app-room-item
+  *ngIf="visible"
+  [background]="selected"
   imagePath="{{ imageSrc }}"
   class="item"
   [style]="getItemImageStyle()"
