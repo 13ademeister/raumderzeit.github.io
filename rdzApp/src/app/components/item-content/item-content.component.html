@@ -1,13 +1,14 @@
-<div *ngIf="visible && selected" class="content">
+<div *ngIf="routeSelected()" class="content">
   <h2>{{ title }}</h2>
   <div class="text">
     <ng-content></ng-content>
   </div>
 </div>
 <app-room-item
-  *ngIf="visible"
-  [background]="selected"
+  *ngIf="routeHome() || routeSelected()"
+  [background]="routeSelected()"
   imagePath="{{ imageSrc }}"
   class="item"
   [style]="getItemImageStyle()"
+  (click)="itemClick()"
 ></app-room-item>
