@@ -1,4 +1,4 @@
-<div *ngIf="routeSelected()" class="content">
+<div class="content" [@enterLeave]="routeSelected() ? 'selected' : 'home'">
   <h2>{{ title }}</h2>
   <div class="text">
     <ng-content></ng-content>

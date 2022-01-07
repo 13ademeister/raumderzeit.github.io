@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -5,6 +12,32 @@ import { Router } from '@angular/router';
   selector: 'app-item-content',
   templateUrl: './item-content.component.html',
   styleUrls: ['./item-content.component.scss'],
+
+  // in template
+  // [@enterLeave]="routeSelected() ? 'selected' : 'home'"
+
+  animations: [
+    trigger('enterLeave', [
+      // ...
+      state(
+        'selected',
+        style({
+          opacity: 1,
+          bottom: 0,
+        })
+      ),
+      state(
+        'home',
+        style({
+          height: '0',
+          bottom: 'none',
+          opacity: 0,
+        })
+      ),
+      transition('home => selected', [animate('1s')]),
+      transition('selected => home', [animate('0.5s')]),
+    ]),
+  ],
 })
 export class ItemContentComponent implements OnInit {
   @Input() title = 'Title';

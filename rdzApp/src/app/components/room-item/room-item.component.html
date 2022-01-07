@@ -1,6 +1,6 @@
 <div class="image-container">
   <img
-    [class.image-background]="background"
+    [@frontBack]="background ? 'background' : 'foreground'"
     class="image"
     src="{{ imagePath }}"
     alt="image"
