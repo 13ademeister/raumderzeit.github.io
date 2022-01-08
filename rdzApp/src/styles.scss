@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  // margin-bottom: 0;
+}
+
+@font-face {
+  font-family: futura;
+  src: url(./assets/fonts/Futura-CondensedLight.otf) format("opentype");
+}
+
+@font-face {
+  font-family: futura-bold;
+  src: url("./assets/fonts/Futura Bold font.ttf") format("truetype");
+}

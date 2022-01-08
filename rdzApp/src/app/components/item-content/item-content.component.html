@@ -1,0 +1,18 @@
+<div
+  [class.content-hide]="!routeSelected()"
+  class="content"
+  [@enterLeave]="routeSelected() ? 'selected' : 'home'"
+>
+  <h2 *ngIf="routeSelected()">{{ title }}</h2>
+  <div class="text">
+    <ng-content></ng-content>
+  </div>
+</div>
+<app-room-item
+  *ngIf="routeHome() || routeSelected()"
+  [background]="routeSelected()"
+  imagePath="{{ imageSrc }}"
+  class="item"
+  [style]="getItemImageStyle()"
+  (click)="itemClick()"
+></app-room-item>

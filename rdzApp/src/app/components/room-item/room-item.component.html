@@ -1,0 +1,9 @@
+<div class="image-container">
+  <img
+    [@frontBack]="background ? 'back' : 'front'"
+    class="image"
+    [class.image-background]="background"
+    src="{{ imagePath }}"
+    alt="image"
+  />
+</div>

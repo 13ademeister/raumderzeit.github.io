@@ -1,0 +1,22 @@
+.item-selected {
+  cursor: zoom-out;
+}
+
+.image-container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: scale-down;
+}
+
+.lamp {
+  top: 40%;
+  right: 5%;
+  max-height: 33%;
+  max-width: 20%;
+}
