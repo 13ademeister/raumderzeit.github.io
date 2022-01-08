@@ -23,14 +23,11 @@ import { Router } from '@angular/router';
         'selected',
         style({
           opacity: 1,
-          bottom: 0,
         })
       ),
       state(
         'home',
         style({
-          height: '0',
-          bottom: 'none',
           opacity: 0,
         })
       ),

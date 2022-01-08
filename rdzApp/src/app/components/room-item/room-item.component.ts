@@ -19,21 +19,21 @@ import { Component, Input, OnInit } from '@angular/core';
     trigger('frontBack', [
       // ...
       state(
-        'foreground',
+        'front',
         style({
           // height: '0',
           opacity: 1,
         })
       ),
       state(
-        'background',
+        'back',
         style({
           // height: '0px',
           opacity: 0.2,
         })
       ),
-      transition('foreground => background', [animate('0.5s')]),
-      transition('background => foreground', [animate('1s')]),
+      transition('front => back', [animate('0.5s')]),
+      transition('back => front', [animate('1s')]),
     ]),
   ],
 })
