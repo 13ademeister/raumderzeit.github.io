@@ -10,6 +10,10 @@ import { MainRoomComponent } from './components/main-room/main-room.component';
 const routes: Routes = [
   { path: 'events', component: MainRoomComponent },
   { path: 'idea', component: MainRoomComponent },
+  { path: 'contribute', component: MainRoomComponent },
+  { path: 'about-us', component: MainRoomComponent },
+  { path: 'contact', component: MainRoomComponent },
+  { path: 'galery', component: MainRoomComponent },
 ];
 
 @NgModule({
