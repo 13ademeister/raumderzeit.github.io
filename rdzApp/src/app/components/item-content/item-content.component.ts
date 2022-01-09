@@ -5,13 +5,17 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-content',
   templateUrl: './item-content.component.html',
   styleUrls: ['./item-content.component.scss'],
+
+  // Need to remove view encapsulation so that the custom tooltip style defined in
+  // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+  encapsulation: ViewEncapsulation.None,
 
   // in template
   // [@enterLeave]="routeSelected() ? 'selected' : 'home'"

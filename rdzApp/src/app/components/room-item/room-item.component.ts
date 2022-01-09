@@ -40,6 +40,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RoomItemComponent implements OnInit {
   @Input() imagePath: string = '';
   @Input() background = false;
+  @Input() title = '';
 
   constructor() {}
 

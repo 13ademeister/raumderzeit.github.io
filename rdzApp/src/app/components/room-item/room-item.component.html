@@ -6,4 +6,7 @@
     src="{{ imagePath }}"
     alt="image"
   />
+  <div *ngIf="!background" class="overlay">
+    <div class="inner-text">{{ title }}</div>
+  </div>
 </div>
