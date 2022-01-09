@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /raumderzeit.github.io/",
+    "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
