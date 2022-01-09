@@ -12,6 +12,4 @@ export class MainRoomComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.config);
   }
-
-  // for template
 }
