@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './item-content.component.html',
   styleUrls: ['./item-content.component.scss'],
 
-  // Need to remove view encapsulation so that the custom tooltip style defined in
-  // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+  // for tooltip?
   encapsulation: ViewEncapsulation.None,
 
   // in template
@@ -44,9 +43,8 @@ export class ItemContentComponent implements OnInit {
   @Input() title = 'Title';
   @Input() imageSrc = '';
   @Input() imageStyle = 'top: 38%; left: 5%; max-height: 50%; max-width: 20%;';
-  @Input() route = 'idea';
+  @Input() route = '';
 
-  private selected = false;
   constructor(private router: Router) {}
 
   getItemImageStyle(): string {

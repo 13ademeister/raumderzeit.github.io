@@ -39,6 +39,7 @@
   .image-container:hover .overlay {
     opacity: 1;
     display: inline-table;
+    z-index: 110; // higher than normal item images: 100
   }
 }
 

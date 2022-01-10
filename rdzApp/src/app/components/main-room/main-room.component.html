@@ -13,15 +13,17 @@
       imageStyle="top: 38%; left: 5%; max-height: 50%; max-width: 12%;"
       route="events"
     >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+      Hier informieren wir euch über zukünftige Veranstaltungen. <br />
+      Mööööööb. Gerade nichts los. <br /><br />
+      Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
+      <br />
+      <a
+        [href]="
+          'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=' +
+          eventInfosMailContent()
+        "
+        >Schreib uns einfach eine E-Mail.</a
+      ><br />
     </app-item-content>
 
     <app-item-content
@@ -30,21 +32,20 @@
       imageStyle="top: 43%; right: 5%; max-height: 30%; max-width: 18%;"
       route="idea"
     >
-      Den Eckladen in der schönen und dynamischen Hedwigstraße verstehen wir als
-      nicht-kommerziellen und vor allem partizipativen Raum für Begegnung und
-      Kultur. Partizipation (Link zu Veranstaltungen) ist unter anderem auf
-      inhaltlicher Ebene möglich, wenn du hier z.B. ein Konzert, ein
-      Vereinstreffen, einen Lesekreis oder ein Nachbarschaftsbrunch organisieren
-      möchtest. Die Besonderheit in dieser Räumlichkeit liegt jedoch in der
-      gegenständlichen Mitgestaltung! Die Ausstattung des Ladens wird nämlich
-      durch geliehene Gegenstände geprägt. Alle so geliehenen Gegenstände
-      erzählen mittels eines QR-Codes ihre eigene Geschichte. Diese Leihobjekte
-      sollen angefasst und verwendet werden und verlassen den Raum nach einer
-      bestimmten Frist. Dadurch wird sich das Erscheinungsbild der Räumlichkeit
-      ständig verändern. (Link zu Mitgestalten) Zu den regulären Öffnungszeiten
-      (Link zu Kontakt) kannst du die Geschichten hinter den Gegenständen
-      erfahren, mit deinen Freund*innen cornern, an deinem Projekt arbeiten oder
-      den Blick übern Kiez schweifen lassen.
+      Der Eckladen in der schönen und dynamischen Hedwigstraße ist ein
+      nicht-kommerzieller und vor allem partizipativer Raum für Begegnung und
+      Kultur. Alle können den Raum <a href="/contribute">mitgestalten</a>! Er
+      soll den Stadtteil bereichern, indem wir eine Mischung aus begehbarem
+      Kunstobjekt, Treffpunkt und Kulturbühne schaffen. Zu den regulären
+      Öffnungszeiten kannst du die Geschichten hinter den ausgestellten
+      Gegenständen erfahren, mit deinen Freund*innen cornern, an deinem Projekt
+      arbeiten oder den Blick übern Kiez schweifen lassen. <br />
+      <br />
+      Einfache Sprache: <br />
+      Dieser Ort braucht kein Geld und ist für alle da. Er steht für Kunst,
+      Kultur und Kontakt. Der Raum ist regelmäßig geöffnet. Du kannst die
+      ausgestellten Gegenstände anschauen, hier Freund*innen treffen oder
+      entspannen.
     </app-item-content>
 
     <app-item-content
@@ -53,15 +54,26 @@
       imageStyle="top: 9%; left: 22%; max-height: 25%; max-width: 16%;"
       route="contribute"
     >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+      Die Ausstattung des Ladens wird durch eure geliehenen Gegenstände geprägt.
+      Jedes geliehene Objekt erzählt mittels eines QR-Codes seine eigene
+      Geschichte über sich oder dessen Besitzer*innen. Die Gegenstände im Laden
+      sollen angefasst und verwendet werden. Außerdem verlassen sie den Raum
+      nach einer bestimmten Frist wieder. Dadurch wird sich das Erscheinungsbild
+      der Räumlichkeit ständig verändern. Möchtest du dem Raum einen Gruß von
+      dir senden?
+      <a
+        [href]="
+          'mailto:kontakt@raum-der-zeit.de?subject=Infos zu meinem Objekt&body=' +
+          itemInfosMailContent()
+        "
+        >Wir freuen uns auf dein Objekt!</a
+      ><br />
+      <br />
+      Einfache Sprache: <br />
+      Alle Gegenstände in dem Raum kommen von verschiedenen Menschen. Du kannst
+      auch einen Gegenstand mitbringen. Sie gehen auch wieder weg nach einer
+      festgelegten Zeit. Der Raum verändert sich immer. Jeder Gegenstand trägt
+      einen QR-Code und erzählt damit eine Geschichte.
     </app-item-content>
 
     <app-item-content
@@ -70,13 +82,23 @@
       imageStyle="top: 40%; left: 34%; max-height: 33%; max-width: 33%;"
       route="about-us"
     >
-      Wir als Bewohner einer Hausgemeinschaft in der Mariannenstraße, aber auch
-      wir als Freund:innen des Leipziger Ostens schätzen den Kiez auf der
-      Hedwigstraße sehr. Es ist ein Ort an dem viel Leben auf der Straße
-      stattfindet. Ob ein Kaffee bei Analog, ne Pizza von Tito oder eine Limo
-      vorm Späti an der Ecke. Wir kennen und mögen sie alle. Und am liebsten
-      würden wir auch gerne einen Teil dazu beitragen einen besonderen Ort der
-      Begegnung zu schaffen.
+      Die monochrome Hausecke wird vom „Raum der Zeit e.V.“ betrieben. Der
+      Verein besteht vor allem aus Nachbar*innen des Leipziger Ostens, die den
+      Stadtteil bereichern wollen. Wir feiern die verschiedenen soziokulturellen
+      und gastronomischen Akteur*innen im Dunstkreis der Hedwigstraße! Es ist
+      eine Gegend, in der viel Leben auf der Straße stattfindet. Das wollen wir
+      fördern und eine weitere kulturelle Anlaufstelle entstehen lassen! Der Ort
+      wird durch aktive Mitwirkende bespielt und durch Fördermitglieder
+      finanziert. Wenn du uns gern unterstützen möchtest,
+      <a href="/contact">schreibe uns eine E-Mail</a>.
+      <br />
+      <br />
+      Einfache Sprache:<br />
+      Der Laden gehört zum Verein „Raum der Zeit e.V.“ Er besteht aus Menschen,
+      die im Osten von Leipzig wohnen. Wir mögen die Stimmung auf der
+      Hedwigstraße und wollen, dass hier noch mehr passiert. Du kannst den Ort
+      unterstützen, mit Geld oder deiner Mitarbeit.
+      <a href="/contact">Schreibe uns gerne eine E-Mail</a>.
     </app-item-content>
 
     <app-item-content
@@ -85,15 +107,39 @@
       imageStyle="top: 5%; right: 5%; max-height: 33%; max-width: 33%;"
       route="contact"
     >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
+      Adresse: <br />
+      Raum der Zeit e.V. <br />
+      Hedwigstraße 11 <br />
+      04315 Leipzig <br />
+      <br />
+      Kontakt: <br />
+      Du willst uns etwas mitteilen? Schreib und gerne eine
+      <a
+        [href]="
+          'mailto:kontakt@raum-der-zeit.de?subject=Kontakt über die Webseite&body=' +
+          simpleMailContent()
+        "
+        >E-Mail mit deinem Anliegen.</a
+      >
+      <br />
+      Du willst mitgestalten? Dann schreib uns einfach eine kurze
+      <a
+        [href]="
+          'mailto:kontakt@raum-der-zeit.de?subject=Infos zu meinem Objekt&body=' +
+          itemInfosMailContent()
+        "
+        >E-Mail mit Infos zu deinem Objekt</a
+      >
+      und gerne ein oder zwei Bildern im Anhang. <br />
+      Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
+      Dann schreib uns eine liebe
+      <a
+        [href]="
+          'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=' +
+          eventInfosMailContent()
+        "
+        >E-Mail mit Infos zum geplanten Event.</a
+      ><br />
     </app-item-content>
 
     <app-item-content
@@ -103,5 +149,7 @@
       route="galery"
     >
     </app-item-content>
+
+    <div class="home" (click)="homeClick()"></div>
   </div>
 </div>
