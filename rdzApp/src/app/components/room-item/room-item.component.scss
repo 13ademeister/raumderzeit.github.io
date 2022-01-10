@@ -35,9 +35,11 @@
   transition: opacity 0.5s ease-out;
 }
 
-.image-container:hover .overlay {
-  opacity: 1;
-  display: inline-table;
+@media (hover: hover) {
+  .image-container:hover .overlay {
+    opacity: 1;
+    display: inline-table;
+  }
 }
 
 .inner-text {

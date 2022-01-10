@@ -2,10 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
   background-color: #ff00ff;
+
+  // not in portrait mode
+  width: 100vw;
+  height: 100vh;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 100vh;
+    height: 100vw;
+  }
 }
