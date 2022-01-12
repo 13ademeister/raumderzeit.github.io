@@ -10,7 +10,13 @@
 
 .image {
   max-width: 95vw;
-  max-height: 95vh;
+  max-height: 80vh;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    max-width: 95vh;
+    max-height: 80vw;
+  }
+
   object-fit: scale-down;
 }
 
@@ -19,4 +25,23 @@
   right: 5%;
   max-height: 33%;
   max-width: 20%;
+}
+
+.home {
+  width: 15vw;
+  height: 19vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }

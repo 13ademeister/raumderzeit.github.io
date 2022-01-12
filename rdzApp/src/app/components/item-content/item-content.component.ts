@@ -5,13 +5,16 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-content',
   templateUrl: './item-content.component.html',
   styleUrls: ['./item-content.component.scss'],
+
+  // for tooltip?
+  encapsulation: ViewEncapsulation.None,
 
   // in template
   // [@enterLeave]="routeSelected() ? 'selected' : 'home'"
@@ -40,9 +43,8 @@ export class ItemContentComponent implements OnInit {
   @Input() title = 'Title';
   @Input() imageSrc = '';
   @Input() imageStyle = 'top: 38%; left: 5%; max-height: 50%; max-width: 20%;';
-  @Input() route = 'idea';
+  @Input() route = '';
 
-  private selected = false;
   constructor(private router: Router) {}
 
   getItemImageStyle(): string {

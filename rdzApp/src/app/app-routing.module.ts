@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'contribute', component: MainRoomComponent },
   { path: 'about-us', component: MainRoomComponent },
   { path: 'contact', component: MainRoomComponent },
-  { path: 'galery', component: MainRoomComponent },
+  { path: 'gallery', component: MainRoomComponent },
+  { path: 'impressum', component: MainRoomComponent },
 ];
 
 @NgModule({

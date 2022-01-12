@@ -15,6 +15,18 @@ h6,
   // margin-bottom: 0;
 }
 
+a,
+.a {
+  color: black;
+  background-color: rgba($color: white, $alpha: 0.5);
+}
+
+a:hover,
+.a:hover {
+  color: white;
+  background-color: rgba($color: black, $alpha: 0.5);
+}
+
 @font-face {
   font-family: futura;
   src: url(./assets/fonts/Futura-CondensedLight.otf) format("opentype");
@@ -23,4 +35,21 @@ h6,
 @font-face {
   font-family: futura-bold;
   src: url("./assets/fonts/Futura Bold font.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "futura-bold", "Helvetica Neue", sans-serif;
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }

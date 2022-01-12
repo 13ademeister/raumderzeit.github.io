@@ -3,16 +3,17 @@
   class="content"
   [@enterLeave]="routeSelected() ? 'selected' : 'home'"
 >
-  <h2 *ngIf="routeSelected()">{{ title }}</h2>
+  <h1 *ngIf="routeSelected()">{{ title }}</h1>
   <div class="text">
     <ng-content></ng-content>
   </div>
 </div>
 <app-room-item
-  *ngIf="routeHome() || routeSelected()"
+  *ngIf="imageSrc !== '' && (routeHome() || routeSelected())"
   [background]="routeSelected()"
   imagePath="{{ imageSrc }}"
   class="item"
   [style]="getItemImageStyle()"
   (click)="itemClick()"
+  [title]="title"
 ></app-room-item>
