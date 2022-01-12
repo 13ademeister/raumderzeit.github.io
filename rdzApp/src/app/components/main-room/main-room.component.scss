@@ -35,3 +35,13 @@
   right: 0;
   cursor: pointer;
 }
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}

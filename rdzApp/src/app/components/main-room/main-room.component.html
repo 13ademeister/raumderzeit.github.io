@@ -146,8 +146,20 @@
       [title]="'EINDRÜCKE'"
       imageSrc="assets/images/chair.png"
       imageStyle="bottom: 8%; right: 35%; max-height: 24%; max-width: 14%;"
-      route="galery"
+      route="gallery"
     >
+      <swiper
+        [config]="config"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        class="swiper-wrapper"
+      >
+        <ng-template swiperSlide *ngFor="let img of images">
+          <div class="swiper-slide">
+            <img style="flex-shrink: 1" [src]="img.src" [alt]="img.alt" />
+          </div>
+        </ng-template>
+      </swiper>
     </app-item-content>
 
     <div class="home" (click)="homeClick()"></div>

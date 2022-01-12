@@ -1,15 +1,104 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+// import Swiper core and required components
+import Swiper, {
+  A11y,
+  Autoplay,
+  Controller,
+  default as SwiperCore,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Thumbs,
+  Virtual,
+  Zoom,
+} from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
+// import Swiper and modules styles
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import { SwiperOptions } from 'swiper/types/swiper-options';
 
+type Image = { src: string; alt: string };
+
+//  install Swiper components
+SwiperCore.use([
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Virtual,
+  Zoom,
+  Autoplay,
+  Thumbs,
+  Controller,
+]);
 @Component({
   selector: 'app-main-room',
   templateUrl: './main-room.component.html',
   styleUrls: ['./main-room.component.scss'],
 })
 export class MainRoomComponent implements OnInit {
-  constructor(private router: Router) {}
+  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  constructor(private router: Router) {
+    Swiper.use([Navigation, Pagination]);
+  }
 
-  ngOnInit(): void {}
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    pagination: { clickable: true },
+    navigation: true,
+    // scrollbar: { draggable: true },
+    // autoHeight: false,
+    // spaceBetween: 0,
+    // centeredSlidesBounds: true,
+    // centeredSlides: true,
+  };
+
+  images: Array<Image> = [
+    {
+      src: './assets/images/carpet.png',
+      alt: 'Image 1',
+    },
+    {
+      src: './assets/images/chair.png',
+      alt: 'Image 2',
+    },
+    {
+      src: './assets/images/couch.png',
+      alt: 'Image 3',
+    },
+    {
+      src: './assets/images/kitchen.png',
+      alt: 'Image 4',
+    },
+    {
+      src: './assets/images/lamp.png',
+      alt: 'Image 5',
+    },
+    {
+      src: './assets/images/plant.png',
+      alt: 'Image 6',
+    },
+    {
+      src: './assets/images/carpet.png',
+      alt: 'Image 7',
+    },
+  ];
+
+  onSwiper(swiper: any) {
+    console.log(swiper);
+  }
+  onSlideChange() {
+    console.log('slide change');
+  }
+
+  ngOnInit(): void {
+    setTimeout(function () {
+      const swiper = new Swiper('.swiper-wrapper');
+    }, 500);
+  }
 
   homeClick() {
     this.router.navigateByUrl('/');
