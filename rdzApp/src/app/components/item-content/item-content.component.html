@@ -9,7 +9,7 @@
   </div>
 </div>
 <app-room-item
-  *ngIf="routeHome() || routeSelected()"
+  *ngIf="imageSrc !== '' && (routeHome() || routeSelected())"
   [background]="routeSelected()"
   imagePath="{{ imageSrc }}"
   class="item"

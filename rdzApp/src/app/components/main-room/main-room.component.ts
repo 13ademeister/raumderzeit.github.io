@@ -106,7 +106,7 @@ export class MainRoomComponent implements OnInit {
 
   itemInfosMailContent(): string {
     return `
-Hallo liebe Menschen vom Raum der Zeit e.V.,%0D%0A
+Hallo liebe Menschen vom Raum der Zeit,%0D%0A
 %0D%0A
 ich habe einen tollen Gegenstand, den ich gerne in den Raum der Zeit stellen möchte. %0D%0A
 Dazu beantworte ich euch gerne ein paar Fragen zum Gegenstand und seiner Geschichte: %0D%0A
@@ -140,13 +140,13 @@ Liebe Grüße,%0D%0A
 [dein Name]%0D%0A
 %0D%0A
 P.S.: Mir ist klar, dass der Gegenstand auch "benutzt" wird. %0D%0A
-Mir ist auch bewusst, dass mine Angaben zu den Fragen über einen QR Code an dem Gegenstand abgerufen werden können.
+Mir ist auch bewusst, dass meine Angaben zu den Fragen über einen QR Code an dem Gegenstand abgerufen werden können.
 `;
   }
 
   simpleMailContent(): string {
     return `
-Hallo liebe Menschen vom Raum der Zeit e.V.,%0D%0A
+Hallo liebe Menschen vom Raum der Zeit,%0D%0A
 %0D%0A
 Ich habe folgendes Anliegen an euch: %0D%0A
 %0D%0A
@@ -161,7 +161,7 @@ Liebe Grüße,%0D%0A
 
   eventInfosMailContent(): string {
     return `
-Hallo liebe Menschen vom Raum der Zeit e.V.,%0D%0A
+Hallo liebe Menschen vom Raum der Zeit,%0D%0A
 %0D%0A
 Ich möchte gerne eine Veranstaltung in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:%0D%0A
 %0D%0A
@@ -174,7 +174,7 @@ Ich möchte gerne eine Veranstaltung in eurem Raum organisieren und beantworte e
 3. Ist das öffentlich oder privat? %0D%0A
 --> [nur meine Oma darf kommen / die Stadt ist eingeladen]%0D%0A
 %0D%0A
-4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit e.V. ein bisschen was spenden? %0D%0A
+4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit ein bisschen was spenden? %0D%0A
 --> [klar, kein Ding nen Fuffy ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen 10er für Strom und Wasser passt]%0D%0A
 %0D%0A
 5. Welche Frage fehlt hier noch bzw. was möchtest du noch dazu mitteilen? %0D%0A
