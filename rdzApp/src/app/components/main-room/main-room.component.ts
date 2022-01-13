@@ -80,7 +80,8 @@ export class MainRoomComponent implements OnInit {
   }
 
   convertImage({ imageFiles }: ImageFiles) {
-    this.images = imageFiles.map((i) => {
+    // this.images = imageFiles.map((i) => {
+    imageFiles.map((i) => {
       console.log(i);
       // todo convert array (i) to object (img)
       let img: Image = { src: '', alt: '' };
