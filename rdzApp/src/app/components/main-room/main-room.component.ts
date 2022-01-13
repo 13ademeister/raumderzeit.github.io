@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  GalleryImagesService,
+  ImageFiles,
+} from 'src/app/services/gallery-images/gallery-images.service';
 // import Swiper core and required components
 import Swiper, {
   A11y,
@@ -22,6 +26,12 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 
 type Image = { src: string; alt: string };
 
+type ImagePaths = {
+  fileName: string;
+  filePath: string;
+  description: string;
+}[];
+
 //  install Swiper components
 SwiperCore.use([
   Navigation,
@@ -41,7 +51,10 @@ SwiperCore.use([
 })
 export class MainRoomComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private galleryService: GalleryImagesService
+  ) {
     Swiper.use([Navigation, Pagination]);
   }
 
@@ -49,12 +62,31 @@ export class MainRoomComponent implements OnInit {
     slidesPerView: 1,
     pagination: { clickable: true },
     navigation: true,
-    // scrollbar: { draggable: true },
+    scrollbar: { draggable: true },
     // autoHeight: false,
     // spaceBetween: 0,
     // centeredSlidesBounds: true,
     // centeredSlides: true,
   };
+
+  galleryImages: ImageFiles | undefined;
+
+  getImages() {
+    this.galleryService.getImageFiles().subscribe((data: ImageFiles) => {
+      this.galleryImages = data;
+      this.convertImage(data);
+      console.log(this.galleryImages);
+    });
+  }
+
+  convertImage({ imageFiles }: ImageFiles) {
+    this.images = imageFiles.map((i) => {
+      console.log(i);
+      // todo convert array (i) to object (img)
+      let img: Image = { src: '', alt: '' };
+      return img;
+    });
+  }
 
   images: Array<Image> = [
     {
@@ -98,6 +130,9 @@ export class MainRoomComponent implements OnInit {
     setTimeout(function () {
       const swiper = new Swiper('.swiper-wrapper');
     }, 500);
+
+    this.getImages();
+    console.log(this.galleryImages);
   }
 
   homeClick() {
