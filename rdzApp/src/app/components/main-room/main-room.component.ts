@@ -91,32 +91,16 @@ export class MainRoomComponent implements OnInit {
 
   images: Array<Image> = [
     {
-      src: './assets/images/carpet.png',
+      src: './assets/gallery/1.jpg',
       alt: 'Image 1',
     },
     {
-      src: './assets/images/chair.png',
+      src: './assets/gallery/2.jpg',
       alt: 'Image 2',
     },
     {
-      src: './assets/images/couch.png',
+      src: './assets/gallery/3.jpg',
       alt: 'Image 3',
-    },
-    {
-      src: './assets/images/kitchen.png',
-      alt: 'Image 4',
-    },
-    {
-      src: './assets/images/lamp.png',
-      alt: 'Image 5',
-    },
-    {
-      src: './assets/images/plant.png',
-      alt: 'Image 6',
-    },
-    {
-      src: './assets/images/carpet.png',
-      alt: 'Image 7',
     },
   ];
 
