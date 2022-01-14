@@ -10,6 +10,11 @@
 </div>
 <app-room-item
   *ngIf="imageSrc !== '' && (routeHome() || routeSelected())"
+  [@animate]="{
+    value: animState,
+    params: { duration: duration, delay: delay }
+  }"
+  (@animate.done)="animState = !animState"
   [background]="routeSelected()"
   imagePath="{{ imageSrc }}"
   class="item"
