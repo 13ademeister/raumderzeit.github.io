@@ -6,6 +6,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { tadaAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-room-item',
@@ -16,6 +17,7 @@ import { Component, Input, OnInit } from '@angular/core';
   // [@frontBack]="background ? 'background' : 'foreground'"
 
   animations: [
+    tadaAnimation({ anchor: 'animate', duration: 5000, delay: 5000 }),
     trigger('frontBack', [
       // ...
       state(
@@ -42,7 +44,18 @@ export class RoomItemComponent implements OnInit {
   @Input() background = false;
   @Input() title = '';
 
+  animState = false;
+  delay: number = 3000;
+  duration: number = 3000;
+
+  public randomInteger(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.delay = this.randomInteger(1000, 3000);
+    this.duration = this.randomInteger(5000, 10000);
+  }
 }

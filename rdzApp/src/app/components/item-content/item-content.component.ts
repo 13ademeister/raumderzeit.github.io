@@ -7,7 +7,6 @@ import {
 } from '@angular/animations';
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { tadaAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-item-content',
@@ -38,8 +37,6 @@ import { tadaAnimation } from 'angular-animations';
       transition('home => selected', [animate('1s')]),
       transition('selected => home', [animate('0.5s')]),
     ]),
-    // pulseAnimation({ anchor: 'animate', duration: 5000, delay: 5000 }),
-    tadaAnimation({ anchor: 'animate', duration: 5000, delay: 5000 }),
   ],
 })
 export class ItemContentComponent implements OnInit {
@@ -48,15 +45,9 @@ export class ItemContentComponent implements OnInit {
   @Input() imageStyle = 'top: 38%; left: 5%; max-height: 50%; max-width: 20%;';
   @Input() route = '';
 
-  animState = false;
-  delay: number = 3000;
-  duration: number = 3000;
-
-  public randomInteger(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   constructor(private router: Router) {}
+
+  ngOnInit(): void {}
 
   getItemImageStyle(): string {
     // return `top: ${this.imageStyle.top}%; left: ${this.imageStyle.left}%; max-height: ${this.imageStyle.height}%; max-width: ${this.imageStyle.width}%;`;
@@ -79,10 +70,5 @@ export class ItemContentComponent implements OnInit {
   routeHome(): boolean {
     if (this.router.url === '/') return true;
     return false;
-  }
-
-  ngOnInit(): void {
-    this.delay = this.randomInteger(5000, 10000);
-    this.duration = this.randomInteger(5000, 10000);
   }
 }

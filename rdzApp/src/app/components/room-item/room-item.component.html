@@ -1,4 +1,11 @@
-<div class="image-container">
+<div
+  class="image-container"
+  [@animate]="{
+    value: animState,
+    params: { duration: duration, delay: delay }
+  }"
+  (@animate.done)="animState = !animState"
+>
   <img
     [@frontBack]="background ? 'back' : 'front'"
     class="image"
@@ -6,7 +13,7 @@
     src="{{ imagePath }}"
     alt="image"
   />
-  <div *ngIf="!background" class="overlay">
+  <div *ngIf="false" class="overlay">
     <div class="inner-text">{{ title }}</div>
   </div>
 </div>

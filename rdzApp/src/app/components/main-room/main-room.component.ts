@@ -62,7 +62,7 @@ export class MainRoomComponent implements OnInit {
     slidesPerView: 1,
     pagination: { clickable: true },
     navigation: true,
-    scrollbar: { draggable: true },
+    scrollbar: { draggable: false },
     // autoHeight: false,
     // spaceBetween: 0,
     // centeredSlidesBounds: true,
@@ -75,13 +75,13 @@ export class MainRoomComponent implements OnInit {
     this.galleryService.getImageFiles().subscribe((data: ImageFiles) => {
       this.galleryImages = data;
       this.convertImage(data);
-      console.log(this.galleryImages);
+      // console.log(this.galleryImages);
     });
   }
 
   convertImage({ imageFiles }: ImageFiles) {
     // this.images = imageFiles.map((i) => {
-    imageFiles.map((i) => {
+    imageFiles.map((i: any) => {
       console.log(i);
       // todo convert array (i) to object (img)
       let img: Image = { src: '', alt: '' };
@@ -117,7 +117,7 @@ export class MainRoomComponent implements OnInit {
     }, 500);
 
     this.getImages();
-    console.log(this.galleryImages);
+    // console.log(this.galleryImages);
   }
 
   homeClick() {
