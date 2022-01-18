@@ -58,6 +58,79 @@ export class MainRoomComponent implements OnInit {
     Swiper.use([Navigation, Pagination]);
   }
 
+  private itemInfosMailContent = `Hallo liebe Menschen vom Raum der Zeit,
+
+ich habe einen tollen Gegenstand, den ich gerne in den Raum der Zeit einbringen möchte. Dazu beantworte ich euch gerne ein paar Fragen:
+
+1. Welchen Namen möchtest du ihm geben?
+-->Name für deinen Gegenstand
+
+2. Ab wann könntest du ihn vorbeibringen?
+-->jetzt / morgen / in drei Wochen
+
+3. Möchtest du ihn am Ende zurück?
+-->könnt ihr gerne behalten / möchte ich gerne zurück
+
+4. Wie bist du auf die Idee gekommen?
+-->das hat dem Raum auf jeden Fall gefehlt / finds einfach nur lustig
+
+5. Gibt es eine lustige / traurige / spannende Geschichte dazu?
+-->das hat mir meine Oma geschenkt / das war schon am anderen Ende der Welt / ...
+
+6. Möchtest du damit auf weitere Informationen aufmerksam machen?
+-->Link zu Webseite / Bilder / Videos / Musik
+
+7. Welche Frage fehlt hier noch, was möchtest du noch dazu teilen?
+-->Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.
+
+Außerdem schicke ich euch gerne noch ein oder zwei Bilder von meinem Gegenstand.
+
+Ich freue mich über eure Rückmeldung!
+Liebe Grüße,
+
+-->dein Name
+
+P.S.: Mir ist klar, dass der Gegenstand auch "benutzt" wird. Mir ist auch bewusst, dass meine Anworten über einen QR Code an dem Gegenstand abgerufen werden können.
+`;
+
+  private simpleMailContent = `Hallo liebe Menschen vom Raum der Zeit,
+
+ich habe folgendes Anliegen an euch:
+
+-->dein Anliegen
+
+Ich freue mich über eure Rückmeldung!
+Liebe Grüße,
+
+-->dein Name
+`;
+
+  private eventInfosMailContent = `Hallo liebe Menschen vom Raum der Zeit,
+
+ich möchte gerne eine Veranstaltung in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:
+
+1. Wie soll die Veranstaltung heißen?
+-->Name: "Super-Mega-Event"
+
+2. Wann soll die Veranstaltung stattfinden?
+-->morgen / nächste Woche / am 30.02. / an einem Sonntag
+
+3. Ist das öffentlich oder privat?
+-->nur meine Oma darf kommen / die Stadt ist eingeladen
+
+4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit ein bisschen was spenden?
+-->klar, kein Ding nen Fuffy ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen 10er für Strom und Wasser passt
+
+5. Welche Frage fehlt hier noch bzw. was möchtest du noch dazu mitteilen?
+-->Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.
+
+Ich freue mich über eure Rückmeldung!
+
+Liebe Grüße,
+
+-->dein Name
+`;
+
   config: SwiperOptions = {
     slidesPerView: 1,
     pagination: { clickable: true },
@@ -124,87 +197,34 @@ export class MainRoomComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
-  itemInfosMailContent(): string {
-    return `
-Hallo liebe Menschen vom Raum der Zeit,%0D%0A
-%0D%0A
-ich habe einen tollen Gegenstand, den ich gerne in den Raum der Zeit stellen möchte. %0D%0A
-Dazu beantworte ich euch gerne ein paar Fragen zum Gegenstand und seiner Geschichte: %0D%0A
-%0D%0A
-1. Welchen Namen möchtest du ihm geben? %0D%0A
---> [Name für deinen Gegenstand]%0D%0A
-%0D%0A
-2. Ab wann könntest du ihn vorbeibringen? %0D%0A
---> [jetzt / morgen / in drei Wochen?]%0D%0A
-%0D%0A
-3. Möchtest du ihn am Ende zurück? %0D%0A
---> [könnt ihr gerne behalten / möchte ihn gerne zurück?]%0D%0A
-%0D%0A
-4. Wie bist du auf die Idee gekommen? %0D%0A
---> [das hat dem Raum auf jeden Fall gefehlt / finds einfach nur lustig / ...]%0D%0A
-%0D%0A
-5. Gibt es eine lustige / traurige / spannende Geschichte dazu? %0D%0A
---> [das hat mir meine Oma geschenkt / das war schon am anderen Ende der Welt / ...]%0D%0A
-%0D%0A
-6. Möchtest du damit auf weitere Informationen aufmerksam machen? %0D%0A
---> [Link zu Webseite / Bilder / Videos / Musik]%0D%0A
-%0D%0A
-7. Welche Frage fehlt hier noch, was möchtest du noch dazu teilen? %0D%0A
---> [Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.]%0D%0A
-%0D%0A
-Außerdem packe ich euch gerne noch ein oder zwei Bilder davon in den Anhang zu dieser E-Mail. %0D%0A
-%0D%0A
-Ich freue mich über eure Rückmeldung! %0D%0A
-Liebe Grüße,%0D%0A
-%0D%0A
-[dein Name]%0D%0A
-%0D%0A
-P.S.: Mir ist klar, dass der Gegenstand auch "benutzt" wird. %0D%0A
-Mir ist auch bewusst, dass meine Angaben zu den Fragen über einen QR Code an dem Gegenstand abgerufen werden können.
-`;
+  testMailContetent = `mailto:yz@example.com?Subject=Hello&body=links:%0Dhttp://link1.com%0Dhttp://link1.com`;
+
+  public convertToURI(mail: string, str: string): string {
+    const URI = mail + encodeURIComponent(str);
+    if (URI.length <= 2000) {
+      return URI;
+    } else {
+      console.error(
+        'Mail content longer than 2000: ' +
+          URI.length +
+          ' Content will be truncated.'
+      );
+      return URI.substring(0, 1980) + '   [...]';
+    }
   }
 
-  simpleMailContent(): string {
-    return `
-Hallo liebe Menschen vom Raum der Zeit,%0D%0A
-%0D%0A
-Ich habe folgendes Anliegen an euch: %0D%0A
-%0D%0A
-[dein Anliegen]%0D%0A
-%0D%0A
-Ich freue mich über eure Rückmeldung! %0D%0A
-Liebe Grüße,%0D%0A
-%0D%0A
-[dein Name]%0D%0A
-`;
-  }
+  itemInfosMail = this.convertToURI(
+    'mailto:kontakt@raum-der-zeit.de?subject=Infos zu meinem Objekt&body=',
+    this.itemInfosMailContent
+  );
 
-  eventInfosMailContent(): string {
-    return `
-Hallo liebe Menschen vom Raum der Zeit,%0D%0A
-%0D%0A
-Ich möchte gerne eine Veranstaltung in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:%0D%0A
-%0D%0A
-1. Wie soll die Veranstaltung heißen? %0D%0A
---> [Name: "Super-Mega-Event"]%0D%0A
-%0D%0A
-2. Wann soll die Veranstaltung stattfinden? %0D%0A
---> [morgen / nächste Woche / am 30.02. / an einem Sonntag]%0D%0A
-%0D%0A
-3. Ist das öffentlich oder privat? %0D%0A
---> [nur meine Oma darf kommen / die Stadt ist eingeladen]%0D%0A
-%0D%0A
-4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit ein bisschen was spenden? %0D%0A
---> [klar, kein Ding nen Fuffy ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen 10er für Strom und Wasser passt]%0D%0A
-%0D%0A
-5. Welche Frage fehlt hier noch bzw. was möchtest du noch dazu mitteilen? %0D%0A
---> [Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.]%0D%0A
-%0D%0A
-%0D%0A
-Ich freue mich über eure Rückmeldung! %0D%0A
-Liebe Grüße,%0D%0A
-%0D%0A
-[dein Name]%0D%0A
-`;
-  }
+  simpleMail = this.convertToURI(
+    'mailto:kontakt@raum-der-zeit.de?subject=Kontakt über die Webseite&body=',
+    this.simpleMailContent
+  );
+
+  eventInfosMail = this.convertToURI(
+    'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=',
+    this.eventInfosMailContent
+  );
 }

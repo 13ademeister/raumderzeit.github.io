@@ -17,13 +17,10 @@
       Mööööööb. Gerade nichts los. <br /><br />
       Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
       <br />
-      <a
-        [href]="
-          'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=' +
-          eventInfosMailContent()
-        "
+      <a target="_top" [href]="eventInfosMail"
         >Schreib uns einfach eine E-Mail.</a
-      ><br />
+      >
+      <br />
     </app-item-content>
 
     <app-item-content
@@ -61,13 +58,10 @@
       nach einer bestimmten Frist wieder. Dadurch wird sich das Erscheinungsbild
       der Räumlichkeit ständig verändern. Möchtest du dem Raum einen Gruß von
       dir senden?
-      <a
-        [href]="
-          'mailto:kontakt@raum-der-zeit.de?subject=Infos zu meinem Objekt&body=' +
-          itemInfosMailContent()
-        "
+      <a target="_top" [href]="itemInfosMail"
         >Wir freuen uns auf dein Objekt!</a
-      ><br />
+      >
+      <br />
       <br />
       Einfache Sprache: <br />
       Alle Gegenstände in dem Raum kommen von verschiedenen Menschen. Du kannst
@@ -108,32 +102,17 @@
       route="contact"
     >
       Du willst uns etwas mitteilen? Schreib und gerne eine
-      <a
-        [href]="
-          'mailto:kontakt@raum-der-zeit.de?subject=Kontakt über die Webseite&body=' +
-          simpleMailContent()
-        "
-        >E-Mail mit deinem Anliegen.</a
-      >
+      <a [href]="simpleMail">E-Mail mit deinem Anliegen.</a>
       <br />
       Du willst mitgestalten? Dann schreib uns einfach eine kurze
-      <a
-        [href]="
-          'mailto:kontakt@raum-der-zeit.de?subject=Infos zu meinem Objekt&body=' +
-          itemInfosMailContent()
-        "
-        >E-Mail mit Infos zu deinem Objekt</a
-      >
+      <a [href]="itemInfosMail">E-Mail mit Infos zu deinem Objekt</a>
       und gerne ein oder zwei Bildern im Anhang. <br />
       Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
       Dann schreib uns eine liebe
-      <a
-        [href]="
-          'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=' +
-          eventInfosMailContent()
-        "
+      <a target="_top" [href]="eventInfosMail"
         >E-Mail mit Infos zum geplanten Event.</a
-      ><br />
+      >
+      <br />
       <br />
       <a href="/impressum">Link zum Impressum</a>
     </app-item-content>
