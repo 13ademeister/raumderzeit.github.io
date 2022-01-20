@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --main-color: #eaff00; // global color
+}
+
 h1,
 h2,
 h3,
@@ -40,16 +45,4 @@ a:hover,
 body {
   margin: 0;
   font-family: "futura-bold", "Helvetica Neue", sans-serif;
-}
-
-@media screen and (max-width: 767px) and (orientation: portrait) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
 }

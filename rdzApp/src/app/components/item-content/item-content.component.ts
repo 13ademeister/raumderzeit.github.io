@@ -44,6 +44,7 @@ export class ItemContentComponent implements OnInit {
   @Input() imageSrc = '';
   @Input() imageStyle = 'top: 38%; left: 5%; max-height: 50%; max-width: 20%;';
   @Input() route = '';
+  @Input() isPortrait = false;
 
   constructor(private router: Router) {}
 

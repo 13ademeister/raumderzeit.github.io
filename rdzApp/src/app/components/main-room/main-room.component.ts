@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { MediaService } from 'ng-helpers';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 import {
   GalleryImagesService,
   ImageFiles,
@@ -53,7 +55,8 @@ export class MainRoomComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   constructor(
     private router: Router,
-    private galleryService: GalleryImagesService
+    private galleryService: GalleryImagesService,
+    private readonly mediaService: MediaService
   ) {
     Swiper.use([Navigation, Pagination]);
   }
@@ -152,6 +155,8 @@ Liebe Grüße,
     });
   }
 
+  public isPortrait = false;
+
   convertImage({ imageFiles }: ImageFiles) {
     // this.images = imageFiles.map((i) => {
     imageFiles.map((i: any) => {
@@ -191,6 +196,15 @@ Liebe Grüße,
 
     this.getImages();
     // console.log(this.galleryImages);
+
+    this.mediaService.setQuery('(orientation: portrait)');
+    this.mediaService.match$
+      .pipe(
+        distinctUntilChanged(),
+        map((isPortrait) => (this.isPortrait = isPortrait))
+        // map((isPortrait) => (this.isPortrait = isPortrait))
+      )
+      .subscribe();
   }
 
   homeClick() {

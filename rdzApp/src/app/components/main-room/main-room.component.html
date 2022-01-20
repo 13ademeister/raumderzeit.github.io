@@ -1,33 +1,48 @@
 <div>
   <div class="image-container">
     <img
+      *ngIf="!isPortrait"
       class="image"
-      src="assets/images/Umrandung Grundriss Variante 01.png"
+      src="assets/images/room-frame.png"
+      alt="image"
+    />
+    <img
+      *ngIf="isPortrait"
+      class="image"
+      src="assets/images/room-frame-portrait.png"
       alt="image"
     />
 
     <app-item-content
-      cdkDrag
       [title]="'VERANSTALTUNGEN'"
       imageSrc="assets/images/kitchen.png"
-      imageStyle="top: 38%; left: 5%; max-height: 50%; max-width: 12%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 38%; left: 5%; max-height: 50%; max-width: 12%;'
+          : 'top: -6%; left: 25%; max-height: 33%; max-width: 28%; transform: rotate(90deg);'
+      "
       route="events"
+      [isPortrait]="isPortrait"
     >
       Hier informieren wir euch über zukünftige Veranstaltungen. <br />
       Mööööööb. Gerade nichts los. <br /><br />
       Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
       <br />
-      <a target="_top" [href]="eventInfosMail"
-        >Schreib uns einfach eine E-Mail.</a
-      >
+      <a [href]="eventInfosMail">Schreib uns einfach eine E-Mail.</a>
+      <br />
       <br />
     </app-item-content>
 
     <app-item-content
       [title]="'IDEE'"
       imageSrc="assets/images/lamp.png"
-      imageStyle="top: 43%; right: 5%; max-height: 30%; max-width: 18%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 43%; right: 5%; max-height: 30%; max-width: 18%;'
+          : 'bottom: 6%; left: 26%; max-height: 18%; max-width: 34%; transform: rotate(90deg);'
+      "
       route="idea"
+      [isPortrait]="isPortrait"
     >
       Der Eckladen in der schönen und dynamischen Hedwigstraße ist ein
       nicht-kommerzieller und vor allem partizipativer Raum für Begegnung und
@@ -48,8 +63,13 @@
     <app-item-content
       [title]="'MITGESTALTEN'"
       imageSrc="assets/images/plant.png"
-      imageStyle="top: 9%; left: 22%; max-height: 25%; max-width: 16%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 9%; left: 22%; max-height: 25%; max-width: 16%;'
+          : 'top: 22%; right: 6%; max-height: 14%; max-width: 27%; transform: rotate(90deg);'
+      "
       route="contribute"
+      [isPortrait]="isPortrait"
     >
       Die Ausstattung des Ladens wird durch eure geliehenen Gegenstände geprägt.
       Jedes geliehene Objekt erzählt mittels eines QR-Codes seine eigene
@@ -73,8 +93,13 @@
     <app-item-content
       [title]="'ÜBER UNS'"
       imageSrc="assets/images/carpet.png"
-      imageStyle="top: 33%; left: 34%; max-height: 33%; max-width: 33%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 33%; left: 34%; max-height: 33%; max-width: 33%;'
+          : 'top: 40%; left: 20%; max-height: 16%; max-width: 60%; transform: rotate(90deg);'
+      "
       route="about-us"
+      [isPortrait]="isPortrait"
     >
       Die monochrome Hausecke wird vom „Raum der Zeit“ betrieben. Der Verein
       besteht vor allem aus Nachbar*innen des Leipziger Ostens, die den
@@ -98,8 +123,13 @@
     <app-item-content
       [title]="'KONTAKT'"
       imageSrc="assets/images/couch.png"
-      imageStyle="top: 5%; right: 5%; max-height: 33%; max-width: 33%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 5%; right: 5%; max-height: 33%; max-width: 33%;'
+          : 'bottom: 15%; right: -3%; max-height: 18%; max-width: 50%; transform: rotate(90deg);'
+      "
       route="contact"
+      [isPortrait]="isPortrait"
     >
       Du willst uns etwas mitteilen? Schreib und gerne eine
       <a [href]="simpleMail">E-Mail mit deinem Anliegen.</a>
@@ -122,6 +152,7 @@
       imageSrc=""
       imageStyle="top: 5%; right: 5%; max-height: 0%; max-width: 0%;"
       route="impressum"
+      [isPortrait]="isPortrait"
     >
       Angaben gemäß § 5 TMG<br />
       <br />
@@ -143,8 +174,13 @@
     <app-item-content
       [title]="'EINDRÜCKE'"
       imageSrc="assets/images/chair.png"
-      imageStyle="bottom: 8%; right: 35%; max-height: 24%; max-width: 14%;"
+      [imageStyle]="
+        !isPortrait
+          ? 'bottom: 8%; right: 35%; max-height: 24%; max-width: 14%;'
+          : 'bottom: 40%; left: 5%; max-height: 12%; max-width: 25%; transform: rotate(90deg);'
+      "
       route="gallery"
+      [isPortrait]="isPortrait"
     >
       <swiper
         [config]="config"
@@ -160,6 +196,9 @@
       </swiper>
     </app-item-content>
 
-    <div class="home" (click)="homeClick()"></div>
+    <div
+      [class]="!isPortrait ? 'home' : 'home-portrait'"
+      (click)="homeClick()"
+    ></div>
   </div>
 </div>

@@ -11,12 +11,6 @@
 .image {
   max-width: 95vw;
   max-height: 80vh;
-
-  @media screen and (max-width: 767px) and (orientation: portrait) {
-    max-width: 95vh;
-    max-height: 80vw;
-  }
-
   object-fit: scale-down;
 }
 
@@ -28,11 +22,20 @@
 }
 
 .home {
-  width: 15vw;
-  height: 19vh;
+  width: 16%;
+  height: 30%;
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
+}
+
+.home-portrait {
+  width: 30%;
+  height: 16%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   cursor: pointer;
 }
 

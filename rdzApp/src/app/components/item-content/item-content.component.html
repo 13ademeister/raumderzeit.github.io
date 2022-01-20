@@ -1,11 +1,15 @@
 <div
   [class.content-hide]="!routeSelected()"
-  class="content"
+  [class]="!isPortrait ? 'content' : 'content-portrait'"
   [@enterLeave]="routeSelected() ? 'selected' : 'home'"
 >
-  <h1 *ngIf="routeSelected()">{{ title }}</h1>
-  <div class="text">
+  <h1 *ngIf="routeSelected()" style="position: absolute">{{ title }}</h1>
+  <div class="text fade">
+    <br />
     <ng-content></ng-content>
+    <br />
+    <br />
+    <br />
   </div>
 </div>
 <app-room-item
