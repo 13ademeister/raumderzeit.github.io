@@ -1,4 +1,4 @@
-.content {
+.container {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   line-height: 1.5;
 }
 
-.content-portrait {
+.container-portrait {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,12 +35,11 @@
   line-height: 1.5;
 }
 
-.content-hide {
+.container-hide {
   display: none;
 }
 
 .text {
-  margin-top: 14%;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -48,6 +47,7 @@
 }
 
 .fade {
+  margin-top: -14%;
   -webkit-mask-image: linear-gradient(
     transparent,
     white,
@@ -70,6 +70,13 @@
     white,
     transparent
   );
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {

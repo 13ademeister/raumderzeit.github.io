@@ -1,15 +1,18 @@
 <div
-  [class.content-hide]="!routeSelected()"
-  [class]="!isPortrait ? 'content' : 'content-portrait'"
+  [class.container-hide]="!routeSelected()"
+  [class]="!isPortrait ? 'container' : 'container-portrait'"
   [@enterLeave]="routeSelected() ? 'selected' : 'home'"
 >
-  <h1 *ngIf="routeSelected()" style="position: absolute">{{ title }}</h1>
-  <div class="text fade">
+  <h1 *ngIf="routeSelected()">{{ title }}</h1>
+  <div *ngIf="hasTextContent" class="text fade">
     <br />
-    <ng-content></ng-content>
+    <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>
     <br />
     <br />
     <br />
+  </div>
+  <div *ngIf="!hasTextContent" #onlyContent class="content">
+    <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>
   </div>
 </div>
 <app-room-item
@@ -22,3 +25,7 @@
   (click)="itemClick()"
   [title]="title"
 ></app-room-item>
+
+<ng-template #tempOutlet>
+  <ng-content></ng-content>
+</ng-template>
