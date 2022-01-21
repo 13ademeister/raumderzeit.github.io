@@ -136,11 +136,12 @@ Liebe Grüße,
 
   config: SwiperOptions = {
     slidesPerView: 1,
+    // slidesPerView: 'auto',
     pagination: { clickable: true },
     navigation: true,
     scrollbar: { draggable: false },
-    // autoHeight: false,
-    // spaceBetween: 0,
+    autoHeight: true,
+    // spaceBetween: 50,
     // centeredSlidesBounds: true,
     // centeredSlides: true,
   };

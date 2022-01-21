@@ -181,6 +181,7 @@
       "
       route="gallery"
       [isPortrait]="isPortrait"
+      [hasTextContent]="false"
     >
       <swiper
         [config]="config"
@@ -190,7 +191,7 @@
       >
         <ng-template swiperSlide *ngFor="let img of images">
           <div class="swiper-slide">
-            <img style="flex-shrink: 1" [src]="img.src" [alt]="img.alt" />
+            <img class="images" [src]="img.src" [alt]="img.alt" />
           </div>
         </ng-template>
       </swiper>
