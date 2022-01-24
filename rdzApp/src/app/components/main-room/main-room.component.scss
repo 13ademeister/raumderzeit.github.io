@@ -14,11 +14,23 @@
   object-fit: scale-down;
 }
 
-.lamp {
-  top: 40%;
-  right: 5%;
-  max-height: 33%;
-  max-width: 20%;
+.insta {
+  display: flex;
+  justify-content: center;
+
+  > .a {
+    display: flex;
+  }
+
+  > a:hover {
+    background-color: var(--main-color);
+  }
+
+  > a > img {
+    max-width: 7vw;
+    max-height: 7vh;
+    object-fit: scale-down;
+  }
 }
 
 .home {
@@ -37,26 +49,4 @@
   bottom: 0;
   left: 0;
   cursor: pointer;
-}
-
-.swiper {
-  // height: 100%;
-  // width: 100%;
-}
-
-.swiper-wrapper {
-  max-height: 100%;
-  max-width: 100%;
-  // height: 0;
-  // width: 0;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.images {
-  max-width: 100%;
-  flex-shrink: 1;
 }

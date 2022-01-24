@@ -131,6 +131,13 @@
       route="contact"
       [isPortrait]="isPortrait"
     >
+      Raum der Zeit <br />
+      Hedwigstraße 11 <br />
+      04315 Leipzig <br />
+      <br />
+      Wir sind gerade noch im Aufbau und halten euch auf dem Laufenden wann es
+      richtig los geht. Hoffentlich bald!<br />
+      <br />
       Du willst uns etwas mitteilen? Schreib und gerne eine
       <a [href]="simpleMail">E-Mail mit deinem Anliegen.</a>
       <br />
@@ -144,6 +151,9 @@
       >
       <br />
       <br />
+      Falls die E-Mail Links bei dir nicht funktionieren, schreib uns eine
+      E-Mail an: kontakt@raum-der-zeit.de <br />
+      <br />
       <a href="/impressum">Link zum Impressum</a>
     </app-item-content>
 
@@ -156,12 +166,12 @@
     >
       Angaben gemäß § 5 TMG<br />
       <br />
-      Raum der Zeit e.V.<br />
+      Raum der Zeit e.V. i.G.<br />
       Hedwigstraße 11<br />
       04315 Leipzig<br />
       <br />
-      Vereinsregister: [Nummer des Registereintrags]<br />
-      Registergericht: [Name des Registergerichts]<br />
+      Vereinsregister: [tbd]<br />
+      Registergericht: [tbd]<br />
       <br />
       Vertreten durch:<br />Julius Colditz<br />
       Anna Morawek<br />
@@ -181,20 +191,20 @@
       "
       route="gallery"
       [isPortrait]="isPortrait"
-      [hasTextContent]="false"
+      [hasTextContent]="true"
     >
-      <swiper
-        [config]="config"
-        (swiper)="onSwiper($event)"
-        (slideChange)="onSlideChange()"
-        class="swiper-wrapper"
-      >
-        <ng-template swiperSlide *ngFor="let img of images">
-          <div class="swiper-slide">
-            <img class="images" [src]="img.src" [alt]="img.alt" />
-          </div>
-        </ng-template>
-      </swiper>
+      Hier haben wir gerade noch keine Bilder. Am besten ihr schaut einfach mal
+      bei Instagram vorbei! <br />
+
+      <div class="insta">
+        <a
+          style="display: inline-block"
+          target="_blank"
+          href="https://www.instagram.com/raum_der_zeit/"
+        >
+          <img src="assets/images/insta.png" alt="image" />
+        </a>
+      </div>
     </app-item-content>
 
     <div

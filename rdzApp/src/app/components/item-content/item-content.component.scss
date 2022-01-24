@@ -47,10 +47,9 @@
 }
 
 .fade {
-  margin-top: -14%;
+  // margin-top: -14%;
   -webkit-mask-image: linear-gradient(
     transparent,
-    white,
     white,
     white,
     white,
@@ -61,7 +60,6 @@
   );
   mask-image: linear-gradient(
     transparent,
-    white,
     white,
     white,
     white,

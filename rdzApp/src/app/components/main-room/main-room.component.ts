@@ -2,10 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MediaService } from 'ng-helpers';
 import { distinctUntilChanged, map } from 'rxjs/operators';
-import {
-  GalleryImagesService,
-  ImageFiles,
-} from 'src/app/services/gallery-images/gallery-images.service';
+import { GalleryImagesService } from 'src/app/services/gallery-images/gallery-images.service';
 // import Swiper core and required components
 import Swiper, {
   A11y,
@@ -24,7 +21,6 @@ import { SwiperComponent } from 'swiper/angular';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import { SwiperOptions } from 'swiper/types/swiper-options';
 
 type Image = { src: string; alt: string };
 
@@ -134,70 +130,9 @@ Liebe Grüße,
 -->dein Name
 `;
 
-  config: SwiperOptions = {
-    slidesPerView: 1,
-    // slidesPerView: 'auto',
-    pagination: { clickable: true },
-    navigation: true,
-    scrollbar: { draggable: false },
-    autoHeight: true,
-    // spaceBetween: 50,
-    // centeredSlidesBounds: true,
-    // centeredSlides: true,
-  };
-
-  galleryImages: ImageFiles | undefined;
-
-  getImages() {
-    this.galleryService.getImageFiles().subscribe((data: ImageFiles) => {
-      this.galleryImages = data;
-      this.convertImage(data);
-      // console.log(this.galleryImages);
-    });
-  }
-
   public isPortrait = false;
 
-  convertImage({ imageFiles }: ImageFiles) {
-    // this.images = imageFiles.map((i) => {
-    imageFiles.map((i: any) => {
-      console.log(i);
-      // todo convert array (i) to object (img)
-      let img: Image = { src: '', alt: '' };
-      return img;
-    });
-  }
-
-  images: Array<Image> = [
-    {
-      src: './assets/gallery/1.jpg',
-      alt: 'Image 1',
-    },
-    {
-      src: './assets/gallery/2.jpg',
-      alt: 'Image 2',
-    },
-    {
-      src: './assets/gallery/3.jpg',
-      alt: 'Image 3',
-    },
-  ];
-
-  onSwiper(swiper: any) {
-    // console.log(swiper);
-  }
-  onSlideChange() {
-    // console.log('slide change');
-  }
-
   ngOnInit(): void {
-    setTimeout(function () {
-      const swiper = new Swiper('.swiper-wrapper');
-    }, 500);
-
-    this.getImages();
-    // console.log(this.galleryImages);
-
     this.mediaService.setQuery('(orientation: portrait)');
     this.mediaService.match$
       .pipe(
