@@ -24,8 +24,26 @@
       route="events"
       [isPortrait]="isPortrait"
     >
-      Hier informieren wir euch über zukünftige Veranstaltungen. <br />
-      Mööööööb. Gerade nichts los. <br /><br />
+      <strong>Eröffnung am Samstag 02.04.2022, 15 - 22 Uhr</strong> <br> <br> 
+      Vielleicht bist du schon einige Male an den großen Schaufenstern vorbeigelaufen und hast dich gefragt, 
+      was hier eigentlich passieren soll. Wenn ja, hast du bestimmt gesehen, dass hier Werkzeug, Farbeimer, 
+      Holz und Bänke herumstehen. Die Leute da drin sehen beschäftigt, aber nett aus und winken freundlich, 
+      wenn man mal etwas länger hineinschaut. <br> 
+      Jetzt eröffnen diese Leute – wir, den Laden mit einem kleinen Fest! <br>
+      Damit du weißt, was da passiert, haben wir einen kleinen <strong>Fahrplan</strong> für dich geschmiedet.<br><br>
+      <u>Zu erst:</u>
+      in Ruhe ankommen, mit Sekt/Saft anstoßen, für die Feierlichkeit applaudieren<br>
+      <u>Danach:</u>
+      Hotdog essen, Kaltgetränk oder Kaffee trinken, dem Konzert lauschen, den Raum entdecken<br>
+      <u>Daraufhin:</u>
+      Die Straße mit Malkreide verschönern, am Glücksrad drehen, die Tapete bekritzeln<br>
+      <u>Schließlich:</u>
+      Gemütlich verweilen, über gute Nachbar:innenschaft nachdenken, vlt noch etwas Tanz am Abend<br>
+      <u>Am Ende:</u>
+      Zufrieden nach Hause gehen oder weiter in den Abend fliegen<br><br>
+
+      ---<br><br>
+
       Möchtest du selber eine Veranstaltung organisieren oder den Raum nutzen?
       <br />
       <a [href]="eventInfosMail">Schreib uns einfach eine E-Mail.</a>
@@ -79,12 +97,14 @@
       Jedes geliehene Objekt erzählt mittels eines QR-Codes seine eigene
       Geschichte über sich oder dessen Besitzer*innen. Die Gegenstände im Laden
       sollen angefasst und verwendet werden. Außerdem verlassen sie den Raum
-      nach einer bestimmten Frist wieder. Dadurch wird sich das Erscheinungsbild
+      nach einer begrenzten Zeit wieder. Dadurch wird sich das Erscheinungsbild
       der Räumlichkeit ständig verändern. Möchtest du dem Raum einen Gruß von
-      dir senden?
+      dir senden? Dann klicke einfach auf 
       <a target="_top" [href]="itemInfosMail"
-        >Wir freuen uns auf dein Objekt!</a
-      >
+        >diesen Link</a
+      > oder schreibe uns eine E-Mail an: kontakt@raum-der-zeit.de und beantworte uns gerne 
+      <a href="/questions">ein paar Fragen</a> dazu. <br>
+      Wir freuen uns auf dein Objekt!
       <br />
       <br />
       Einfache Sprache: <br />
@@ -94,6 +114,51 @@
     >. Sie gehen auch wieder weg nach einer
       festgelegten Zeit. Der Raum verändert sich immer. Jeder Gegenstand trägt
       einen QR-Code und erzählt damit eine Geschichte.
+    </app-item-content>
+
+    <app-item-content
+    [title]="'Infos zu deinem Objekt'"
+      [imageStyle]="
+        !isPortrait
+          ? 'top: 33%; left: 34%; max-height: 33%; max-width: 33%;'
+          : 'top: 40%; left: 20%; max-height: 16%; max-width: 60%; transform: rotate(90deg);'
+      "
+      route="questions"
+      [isPortrait]="isPortrait"
+    >
+    Schön, dass du darüber nachdenkst den Raum der Zeit mitzugestalten! <br> 
+    Bitte schickte uns dafür einfach eine E-Mail an kontakt@raum-der-zeit.de und 
+    beantworte uns doch gerne gleich bei Gelegenheit noch ein paar Fragen zu 
+    dem Gegenstand, den du mitbringen möchtest!<br>
+    <br>
+    1. Welchen Namen möchtest du ihm geben? <br>
+    => Name für deinen Gegenstand <br><br>
+
+    2. Ab wann könntest du ihn vorbeibringen? <br>
+    => jetzt / morgen / in drei Wochen <br><br>
+
+    3. Möchtest du ihn am Ende zurück? <br>
+    => könnt ihr gerne behalten / möchte ich gerne zurück <br><br>
+
+    4. Wie bist du auf die Idee gekommen? <br>
+    => das hat dem Raum auf jeden Fall gefehlt / finds einfach nur lustig <br><br>
+
+    5. Gibt es eine lustige / traurige / spannende Geschichte dazu? <br>
+    => das hat mir meine Oma geschenkt / das war schon am anderen Ende der Welt / ... <br><br>
+
+    6. Möchtest du damit auf weitere Informationen aufmerksam machen? <br>
+    => Link zu Webseite / Bilder / Videos / Musik <br><br>
+  
+    7. Welche Frage fehlt hier noch, was möchtest du noch dazu teilen? <br>
+    => Was ist der Sinn des Lebens? => Die Antwort ist im Zweifel immer 42. <br>
+    <br>
+    Zum Schluss: Schicke uns im Anhang zur E-Mail doch bitte noch ein oder zwei Fotos von deinem Gegenstand. <br> 
+    <br>
+    P.S. Dir sollte bewusst sein, dass dein Gegenstand auch in normalem Umfang "benutzt" wird und 
+    dass deine Anworten über einen QR Code an dem Objekt abgerufen werden können. 
+    Vielleicht haben wir dich jetzt verunsichert oder du hast noch weitere Fragen. 
+    (Das könnnen wir verstehen.) Melde dich einfach bei uns und wir klären dann alles weitere gerne 
+    ganz individuell mit dir im direkten Kontakt. :)
     </app-item-content>
 
     <app-item-content
@@ -202,7 +267,7 @@
       [isPortrait]="isPortrait"
       [hasTextContent]="true"
     >
-      Hier haben wir gerade noch keine Bilder. Am besten ihr schaut einfach mal
+      Hier haben wir gerade keine Bilder. Am besten ihr schaut einfach mal
       bei Instagram vorbei! <br />
 
       <div class="insta">

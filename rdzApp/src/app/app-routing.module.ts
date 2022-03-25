@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'contact', component: MainRoomComponent },
   { path: 'gallery', component: MainRoomComponent },
   { path: 'impressum', component: MainRoomComponent },
+  { path: 'questions', component: MainRoomComponent },
 ];
 
 @NgModule({
