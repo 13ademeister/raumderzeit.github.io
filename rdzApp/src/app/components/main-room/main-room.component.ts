@@ -138,7 +138,6 @@ Liebe Grüße,
       .pipe(
         distinctUntilChanged(),
         map((isPortrait) => (this.isPortrait = isPortrait))
-        // map((isPortrait) => (this.isPortrait = isPortrait))
       )
       .subscribe();
   }
@@ -146,8 +145,6 @@ Liebe Grüße,
   homeClick() {
     this.router.navigateByUrl('/');
   }
-
-  testMailContetent = `mailto:yz@example.com?Subject=Hello&body=links:%0Dhttp://link1.com%0Dhttp://link1.com`;
 
   public convertToURI(mail: string, str: string): string {
     const URI = mail + encodeURIComponent(str);

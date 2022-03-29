@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "serve:build": "http-server docs/",
+    "serve:build": "http-server docs/ --proxy http://192.168.0.3:8084?",
     "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

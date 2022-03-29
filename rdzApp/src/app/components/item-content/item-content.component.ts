@@ -39,7 +39,7 @@ import { Router } from '@angular/router';
     ]),
   ],
 })
-export class ItemContentComponent implements OnInit {
+export class ItemContentComponent {
   @Input() title = 'Title';
   @Input() imageSrc = '';
   @Input() imageStyle = 'top: 38%; left: 5%; max-height: 50%; max-width: 20%;';
@@ -49,10 +49,7 @@ export class ItemContentComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
-
   getItemImageStyle(): string {
-    // return `top: ${this.imageStyle.top}%; left: ${this.imageStyle.left}%; max-height: ${this.imageStyle.height}%; max-width: ${this.imageStyle.width}%;`;
     return this.imageStyle;
   }
 
