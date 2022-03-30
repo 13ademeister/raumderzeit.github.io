@@ -14,6 +14,7 @@ import { QrItemComponent } from './components/qr-item/qr-item.component';
 import { BuegelnBrettComponent } from './components/qr-item/objects/buegeln-brett/buegeln-brett.component';
 import { AllQrItemsComponent } from './components/all-qr-items/all-qr-items.component';
 import { WrongLinkComponent } from './components/qr-item/objects/wrong-link/wrong-link.component';
+import { BadezimmerFicusComponent } from './components/qr-item/objects/badezimmer-ficus/badezimmer-ficus.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { WrongLinkComponent } from './components/qr-item/objects/wrong-link/wron
     BuegelnBrettComponent,
     AllQrItemsComponent,
     WrongLinkComponent,
+    BadezimmerFicusComponent,
   ],
   imports: [
     BrowserModule,

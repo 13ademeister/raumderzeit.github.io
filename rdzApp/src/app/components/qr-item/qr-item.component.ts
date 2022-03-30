@@ -5,7 +5,6 @@ import { distinctUntilChanged, map } from 'rxjs/operators';
 @Component({
   selector: 'app-qr-item',
   templateUrl: './qr-item.component.html',
-  styleUrls: ['./qr-item.component.scss'],
 })
 export class QrItemComponent implements OnInit {
   @Input() name = 'Name of Object';

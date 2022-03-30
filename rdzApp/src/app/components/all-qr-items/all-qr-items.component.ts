@@ -4,7 +4,6 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-all-qr-items',
   templateUrl: './all-qr-items.component.html',
-  styleUrls: ['./all-qr-items.component.scss'],
 })
 export class AllQrItemsComponent implements OnInit {
   objectId: string | null = '';

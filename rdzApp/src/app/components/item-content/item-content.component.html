@@ -18,7 +18,7 @@
 <app-room-item
   cdkDrag
   *ngIf="imageSrc !== '' && ((!isQrObject && routeHome()) || routeSelected())"
-  [background]="!isQrObject && routeSelected()"
+  [background]="routeSelected()"
   imagePath="{{ imageSrc }}"
   class="item"
   [style]="getItemImageStyle()"
