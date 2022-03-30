@@ -46,6 +46,7 @@ export class ItemContentComponent {
   @Input() route = '';
   @Input() isPortrait = false;
   @Input() hasTextContent = true;
+  @Input() isQrObject = false;
 
   constructor(private router: Router) {}
 
@@ -63,6 +64,7 @@ export class ItemContentComponent {
 
   routeSelected(): boolean {
     if (this.router.url === '/' + this.route) return true;
+    if (this.isQrObject) return true;
     return false;
   }
 

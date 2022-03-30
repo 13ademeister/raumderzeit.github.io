@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { ItemContentComponent } from './components/item-content/item-content.component';
 import { MainRoomComponent } from './components/main-room/main-room.component';
 import { RoomItemComponent } from './components/room-item/room-item.component';
+import { QrItemComponent } from './components/qr-item/qr-item.component';
+import { BuegelnBrettComponent } from './components/qr-item/objects/buegeln-brett/buegeln-brett.component';
+import { AllQrItemsComponent } from './components/all-qr-items/all-qr-items.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { RoomItemComponent } from './components/room-item/room-item.component';
     MainRoomComponent,
     RoomItemComponent,
     ItemContentComponent,
+    QrItemComponent,
+    BuegelnBrettComponent,
+    AllQrItemsComponent,
   ],
   imports: [
     BrowserModule,

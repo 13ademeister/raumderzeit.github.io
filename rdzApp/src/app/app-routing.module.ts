@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'gallery', component: MainRoomComponent },
   { path: 'impressum', component: MainRoomComponent },
   { path: 'questions', component: MainRoomComponent },
+  { path: 'object/:id', component: MainRoomComponent },
+  { path: '**', component: MainRoomComponent},
 ];
 
 @NgModule({
