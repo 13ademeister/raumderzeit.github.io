@@ -1,13 +1,13 @@
 <app-item-content
-      [title]="name"
-      [imageSrc]="imageSrc"
-      [imageStyle]="
-        !isPortrait
-          ? 'top: 7%; right: 0%; max-height: 25%; max-width: 25%; z-index: 200;'
-          : 'top: 0%; right: 6%; max-height: 20%; max-width: 20%; z-index: 200;'
-      "
-      [isPortrait]="isPortrait"
-      [isQrObject]="true"
-    >
-    <ng-content></ng-content>
+  [title]="name"
+  [imageSrc]="imageSrc"
+  [imageStyle]="
+    !isPortrait
+      ? 'top: 7%; right: 0%; max-height: 25%; max-width: 25%; z-index: 200;'
+      : 'top: 0%; right: 6%; max-height: 20%; max-width: 20%; z-index: 200;'
+  "
+  [isPortrait]="isPortrait"
+  [isQrObject]="true"
+>
+  <ng-content></ng-content>
 </app-item-content>

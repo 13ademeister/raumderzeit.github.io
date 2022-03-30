@@ -7,6 +7,7 @@
     "build": "ng build",
     "serve:build": "http-server docs/ --proxy http://192.168.0.3:8080?",
     "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de",
+    "format": "prettier --write .  --ignore-path .gitignore",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -25,6 +26,7 @@
     "angular-animations": "^0.11.0",
     "browser-sync": "^2.27.7",
     "ng-helpers": "^0.9.0",
+    "prettier": "^2.6.1",
     "rxjs": "~6.6.0",
     "swiper": "^7.4.1",
     "tslib": "^2.3.1",

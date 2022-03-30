@@ -5,7 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './buegeln-brett.component.html',
 })
 export class BuegelnBrettComponent {
-
   constructor() {}
-
 }

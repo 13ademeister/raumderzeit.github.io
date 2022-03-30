@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-wrong-link',
   templateUrl: './wrong-link.component.html',
 })
-export class WrongLinkComponent{
-
-  constructor() { }
+export class WrongLinkComponent {
+  constructor() {}
 }

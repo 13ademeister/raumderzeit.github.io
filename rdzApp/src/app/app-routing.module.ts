@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'impressum', component: MainRoomComponent },
   { path: 'questions', component: MainRoomComponent },
   { path: 'object/:id', component: MainRoomComponent },
-  { path: '**',redirectTo: '', component: MainRoomComponent},
+  { path: '**', redirectTo: '', component: MainRoomComponent },
 ];
 
 @NgModule({
