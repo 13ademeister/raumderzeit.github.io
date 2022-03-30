@@ -13,6 +13,7 @@ import { RoomItemComponent } from './components/room-item/room-item.component';
 import { QrItemComponent } from './components/qr-item/qr-item.component';
 import { BuegelnBrettComponent } from './components/qr-item/objects/buegeln-brett/buegeln-brett.component';
 import { AllQrItemsComponent } from './components/all-qr-items/all-qr-items.component';
+import { WrongLinkComponent } from './components/qr-item/objects/wrong-link/wrong-link.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AllQrItemsComponent } from './components/all-qr-items/all-qr-items.comp
     QrItemComponent,
     BuegelnBrettComponent,
     AllQrItemsComponent,
+    WrongLinkComponent,
   ],
   imports: [
     BrowserModule,
