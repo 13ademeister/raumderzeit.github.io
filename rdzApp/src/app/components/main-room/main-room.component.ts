@@ -146,6 +146,12 @@ Liebe Grüße,
     this.router.navigateByUrl('/');
   }
 
+  routeObject(): boolean {
+    console.log(this.router.url);
+    if (this.router.url.includes('/object')) return true;
+    return false;
+  }
+
   public convertToURI(mail: string, str: string): string {
     const URI = mail + encodeURIComponent(str);
     if (URI.length <= 2000) {
