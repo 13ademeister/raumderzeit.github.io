@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'gallery', component: MainRoomComponent },
   { path: 'impressum', component: MainRoomComponent },
   { path: 'questions', component: MainRoomComponent },
+  // disable for web deployment
   { path: 'object/:id', component: MainRoomComponent },
   { path: '**', redirectTo: '', component: MainRoomComponent },
 ];
