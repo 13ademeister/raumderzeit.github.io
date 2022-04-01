@@ -3,7 +3,7 @@
   [class]="!isPortrait ? 'container' : 'container-portrait'"
   [@enterLeave]="routeSelected() ? 'selected' : 'home'"
 >
-  <h1 *ngIf="routeSelected()">{{ title }}</h1>
+  <h2 *ngIf="routeSelected()">{{ title }}</h2>
   <div *ngIf="hasTextContent" class="text fade">
     <br />
     <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>

@@ -15,6 +15,10 @@ import { BuegelnBrettComponent } from './components/qr-item/objects/buegeln-bret
 import { AllQrItemsComponent } from './components/all-qr-items/all-qr-items.component';
 import { WrongLinkComponent } from './components/qr-item/objects/wrong-link/wrong-link.component';
 import { BadezimmerFicusComponent } from './components/qr-item/objects/badezimmer-ficus/badezimmer-ficus.component';
+import { DagmarComponent } from './components/qr-item/objects/dagmar/dagmar.component';
+import { IdeenleuchteComponent } from './components/qr-item/objects/ideenleuchte/ideenleuchte.component';
+import { KniffelComponent } from './components/qr-item/objects/kniffel/kniffel.component';
+import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit/raum-der-zeit.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { BadezimmerFicusComponent } from './components/qr-item/objects/badezimme
     AllQrItemsComponent,
     WrongLinkComponent,
     BadezimmerFicusComponent,
+    DagmarComponent,
+    IdeenleuchteComponent,
+    KniffelComponent,
+    RaumDerZeitComponent,
   ],
   imports: [
     BrowserModule,
