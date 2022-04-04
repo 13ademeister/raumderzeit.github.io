@@ -9,11 +9,10 @@ if (environment.production) {
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+  .catch((err: any) => console.error(err));
 
 if (environment.production) {
-  // assuming you have env variable configured
-  // check if window exists, if you render backend window will not be available
+  // disable console log in production
   if (window) {
     window.console.log = function () {};
   }

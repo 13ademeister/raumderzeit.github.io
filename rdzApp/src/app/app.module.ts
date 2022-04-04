@@ -19,6 +19,7 @@ import { DagmarComponent } from './components/qr-item/objects/dagmar/dagmar.comp
 import { IdeenleuchteComponent } from './components/qr-item/objects/ideenleuchte/ideenleuchte.component';
 import { KniffelComponent } from './components/qr-item/objects/kniffel/kniffel.component';
 import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit/raum-der-zeit.component';
+import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/tante-herta.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit
     IdeenleuchteComponent,
     KniffelComponent,
     RaumDerZeitComponent,
+    TanteHertaComponent,
   ],
   imports: [
     BrowserModule,
