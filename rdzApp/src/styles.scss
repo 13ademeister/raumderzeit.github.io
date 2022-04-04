@@ -46,3 +46,10 @@ body {
   margin: 0;
   font-family: "futura-bold", "Helvetica Neue", sans-serif;
 }
+
+// for vime player
+/* Default theme. ~960B */
+@import "~@vime/core/themes/default.css";
+
+/* Optional light theme (extends default). ~400B */
+@import "~@vime/core/themes/light.css";

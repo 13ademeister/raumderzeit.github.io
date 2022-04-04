@@ -20,6 +20,7 @@ import { IdeenleuchteComponent } from './components/qr-item/objects/ideenleuchte
 import { KniffelComponent } from './components/qr-item/objects/kniffel/kniffel.component';
 import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit/raum-der-zeit.component';
 import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/tante-herta.component';
+import { VimeModule } from '@vime/angular';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/ta
     SwiperModule,
     HttpClientModule,
     MediaModule,
+    VimeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
