@@ -21,6 +21,7 @@ import { KniffelComponent } from './components/qr-item/objects/kniffel/kniffel.c
 import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit/raum-der-zeit.component';
 import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/tante-herta.component';
 import { VimeModule } from '@vime/angular';
+import { LaValseMusetteComponent } from './components/qr-item/objects/la-valse-musette/la-valse-musette.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { VimeModule } from '@vime/angular';
     KniffelComponent,
     RaumDerZeitComponent,
     TanteHertaComponent,
+    LaValseMusetteComponent,
   ],
   imports: [
     BrowserModule,
