@@ -22,6 +22,7 @@ import { RaumDerZeitComponent } from './components/qr-item/objects/raum-der-zeit
 import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/tante-herta.component';
 import { VimeModule } from '@vime/angular';
 import { LaValseMusetteComponent } from './components/qr-item/objects/la-valse-musette/la-valse-musette.component';
+import { VonMamaComponent } from './components/qr-item/objects/von-mama/von-mama.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { LaValseMusetteComponent } from './components/qr-item/objects/la-valse-m
     RaumDerZeitComponent,
     TanteHertaComponent,
     LaValseMusetteComponent,
+    VonMamaComponent,
   ],
   imports: [
     BrowserModule,
