@@ -23,6 +23,7 @@ import { TanteHertaComponent } from './components/qr-item/objects/tante-herta/ta
 import { VimeModule } from '@vime/angular';
 import { LaValseMusetteComponent } from './components/qr-item/objects/la-valse-musette/la-valse-musette.component';
 import { VonMamaComponent } from './components/qr-item/objects/von-mama/von-mama.component';
+import { TilloPillowComponent } from './components/qr-item/objects/tillo-pillow/tillo-pillow.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { VonMamaComponent } from './components/qr-item/objects/von-mama/von-mama
     TanteHertaComponent,
     LaValseMusetteComponent,
     VonMamaComponent,
+    TilloPillowComponent,
   ],
   imports: [
     BrowserModule,
