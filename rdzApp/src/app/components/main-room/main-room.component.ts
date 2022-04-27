@@ -73,7 +73,7 @@ ich habe einen tollen Gegenstand, den ich gerne in den Raum der Zeit einbringen 
 4. Wie bist du auf die Idee gekommen?
 -->das hat dem Raum auf jeden Fall gefehlt / finds einfach nur lustig
 
-5. Gibt es eine lustige / traurige / spannende Geschichte dazu?
+5. Kannst du uns etwas über dich oder den Gegenstand erzählen?
 -->das hat mir meine Oma geschenkt / das war schon am anderen Ende der Welt / ...
 
 6. Möchtest du damit auf weitere Informationen aufmerksam machen?

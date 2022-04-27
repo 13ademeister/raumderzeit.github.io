@@ -27,6 +27,7 @@ import { TilloPillowComponent } from './components/qr-item/objects/tillo-pillow/
 import { FlyingYoghurtComponent } from './components/qr-item/objects/flying-yoghurt/flying-yoghurt.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { YtPlayerComponent } from './components/yt-player/yt-player.component';
+import { WiederFernsehnComponent } from './components/qr-item/objects/wieder-fernsehn/wieder-fernsehn.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { YtPlayerComponent } from './components/yt-player/yt-player.component';
     TilloPillowComponent,
     FlyingYoghurtComponent,
     YtPlayerComponent,
+    WiederFernsehnComponent,
   ],
   imports: [
     BrowserModule,

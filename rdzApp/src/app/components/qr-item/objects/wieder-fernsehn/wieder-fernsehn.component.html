@@ -1,0 +1,14 @@
+<app-qr-item [name]="'Wieder fernsehn'" [imageSrc]="'assets/images/lamp.png'">
+  <strong>Wer hat diesen Gegenstand eingebracht? </strong><br />
+  Leon<br />
+  <br />
+  <strong>Welche Geschichte möchtest du zu deinem Gegenstand erzählen?</strong>
+  <br />
+  <vm-player autoplay muted controls>
+    <vm-audio cross-origin>
+      <source data-src="assets/audio/wieder-fernsehn.ogg" type="audio/mp3" />
+    </vm-audio>
+  </vm-player>
+  <br />
+  <br />
+</app-qr-item>
