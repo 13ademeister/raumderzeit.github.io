@@ -24,6 +24,9 @@ import { VimeModule } from '@vime/angular';
 import { LaValseMusetteComponent } from './components/qr-item/objects/la-valse-musette/la-valse-musette.component';
 import { VonMamaComponent } from './components/qr-item/objects/von-mama/von-mama.component';
 import { TilloPillowComponent } from './components/qr-item/objects/tillo-pillow/tillo-pillow.component';
+import { FlyingYoghurtComponent } from './components/qr-item/objects/flying-yoghurt/flying-yoghurt.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { YtPlayerComponent } from './components/yt-player/yt-player.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import { TilloPillowComponent } from './components/qr-item/objects/tillo-pillow/
     LaValseMusetteComponent,
     VonMamaComponent,
     TilloPillowComponent,
+    FlyingYoghurtComponent,
+    YtPlayerComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,7 @@ import { TilloPillowComponent } from './components/qr-item/objects/tillo-pillow/
     HttpClientModule,
     MediaModule,
     VimeModule,
+    YouTubePlayerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
