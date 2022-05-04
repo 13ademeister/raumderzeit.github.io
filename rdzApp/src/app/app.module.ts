@@ -28,6 +28,7 @@ import { FlyingYoghurtComponent } from './components/qr-item/objects/flying-yogh
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { YtPlayerComponent } from './components/yt-player/yt-player.component';
 import { WiederFernsehnComponent } from './components/qr-item/objects/wieder-fernsehn/wieder-fernsehn.component';
+import { StuhlComponent } from './components/qr-item/objects/stuhl/stuhl.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { WiederFernsehnComponent } from './components/qr-item/objects/wieder-fer
     FlyingYoghurtComponent,
     YtPlayerComponent,
     WiederFernsehnComponent,
+    StuhlComponent,
   ],
   imports: [
     BrowserModule,
