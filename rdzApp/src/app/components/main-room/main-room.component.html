@@ -280,18 +280,28 @@
       [isPortrait]="isPortrait"
       [hasTextContent]="true"
     >
-      Hier haben wir gerade keine Bilder. Am besten ihr schaut einfach mal bei
+      Hier haben wir gerade keine Bilder. Am besten du schaust einfach mal bei
       Instagram vorbei! <br />
 
       <div class="insta">
         <a
-          style="display: inline-block"
+          style="display: inline-block; background-color: transparent"
           target="_blank"
           href="https://www.instagram.com/raum_der_zeit/"
         >
           <img src="assets/images/insta.png" alt="image" />
         </a>
       </div>
+
+      Außerdem haben wir nun auch einen
+      <a
+        target="_blank"
+        href="https://www.youtube.com/channel/UC9M_zFU_adEuijTM0VejIRQ"
+        >Youtube-Kanal
+      </a>
+      auf dem wir ab und zu mal Video hochladen. Den kannst du dir natürlich
+      auch gerne abonnieren!
+      <app-yt-player videoId="sVtYZYN79wU"></app-yt-player>
     </app-item-content>
 
     <app-all-qr-items *ngIf="routeObject()"></app-all-qr-items>
