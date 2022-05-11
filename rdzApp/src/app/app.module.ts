@@ -29,6 +29,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { YtPlayerComponent } from './components/yt-player/yt-player.component';
 import { WiederFernsehnComponent } from './components/qr-item/objects/wieder-fernsehn/wieder-fernsehn.component';
 import { StuhlComponent } from './components/qr-item/objects/stuhl/stuhl.component';
+import { RosenkorbComponent } from './components/qr-item/objects/rosenkorb/rosenkorb.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { StuhlComponent } from './components/qr-item/objects/stuhl/stuhl.compone
     YtPlayerComponent,
     WiederFernsehnComponent,
     StuhlComponent,
+    RosenkorbComponent,
   ],
   imports: [
     BrowserModule,
