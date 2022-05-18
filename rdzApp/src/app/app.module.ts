@@ -30,6 +30,9 @@ import { YtPlayerComponent } from './components/yt-player/yt-player.component';
 import { WiederFernsehnComponent } from './components/qr-item/objects/wieder-fernsehn/wieder-fernsehn.component';
 import { StuhlComponent } from './components/qr-item/objects/stuhl/stuhl.component';
 import { RosenkorbComponent } from './components/qr-item/objects/rosenkorb/rosenkorb.component';
+import { DxSchedulerModule } from 'devextreme-angular/ui/scheduler';
+import { DxButtonModule } from 'devextreme-angular';
+import { DxCalendarComponent } from './components/dx-calendar/dx-calendar.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,7 @@ import { RosenkorbComponent } from './components/qr-item/objects/rosenkorb/rosen
     WiederFernsehnComponent,
     StuhlComponent,
     RosenkorbComponent,
+    DxCalendarComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +70,8 @@ import { RosenkorbComponent } from './components/qr-item/objects/rosenkorb/rosen
     MediaModule,
     VimeModule,
     YouTubePlayerModule,
+    DxSchedulerModule,
+    DxButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

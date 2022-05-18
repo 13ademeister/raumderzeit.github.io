@@ -30,7 +30,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.png", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/devextreme/dist/css/dx.light.css"
+            ],
             "scripts": []
           },
           "configurations": {
