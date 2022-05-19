@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DxSchedulerModule } from 'devextreme-angular';
-
 import DataSource from 'devextreme/data/data_source';
 import CustomStore from 'devextreme/data/custom_store';
 import { HttpClient } from '@angular/common/http';
+
+import { locale } from 'devextreme/localization';
 
 @Component({
   selector: 'app-dx-calendar',
@@ -13,9 +13,11 @@ import { HttpClient } from '@angular/common/http';
 export class DxCalendarComponent implements OnInit {
   dataSource: any;
 
-  currentDate: Date = new Date(2017, 4, 25);
+  currentDate: Date = new Date();
 
   constructor(private http: HttpClient) {
+    locale(navigator.language);
+
     this.dataSource = new DataSource({
       store: new CustomStore({
         load: (options) => this.getData(options, { showDeleted: false }),
@@ -24,8 +26,8 @@ export class DxCalendarComponent implements OnInit {
   }
 
   private getData(options: any, requestOptions: any) {
-    const PUBLIC_KEY = 'AIzaSyBnNAISIUKe6xdhq1_rjor2rxoI3UlMY7k';
-    const CALENDAR_ID = 'f7jnetm22dsjc3npc2lu3buvu4@group.calendar.google.com';
+    const PUBLIC_KEY = 'AIzaSyCHCizWWIPVrrBwCnd3rlAbY92u4HYamAs';
+    const CALENDAR_ID = 'vlrfhmscr09a89urrkm855908c@group.calendar.google.com';
     const dataUrl = [
       'https://www.googleapis.com/calendar/v3/calendars/',
       CALENDAR_ID,
