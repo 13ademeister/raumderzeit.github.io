@@ -1,5 +1,8 @@
 @stencil/core/internal/client
 
+devextreme
+SEE LICENSE IN README.md
+
 luxon
 MIT
 Copyright 2019 JS Foundation and other contributors
