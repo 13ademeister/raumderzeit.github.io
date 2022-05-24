@@ -55,6 +55,14 @@
     <app-rosenkorb></app-rosenkorb>
   </ng-container>
 
+  <ng-container *ngSwitchCase="'kamera'">
+    <app-kamera></app-kamera>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'piano'">
+    <app-piano></app-piano>
+  </ng-container>
+
   <ng-container *ngSwitchDefault>
     <app-wrong-link></app-wrong-link>
   </ng-container>

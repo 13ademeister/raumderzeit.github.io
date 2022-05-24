@@ -33,6 +33,8 @@ import { RosenkorbComponent } from './components/qr-item/objects/rosenkorb/rosen
 import { DxSchedulerModule } from 'devextreme-angular/ui/scheduler';
 import { DxButtonModule } from 'devextreme-angular';
 import { DxCalendarComponent } from './components/dx-calendar/dx-calendar.component';
+import { KameraComponent } from './components/qr-item/objects/kamera/kamera.component';
+import { PianoComponent } from './components/qr-item/objects/piano/piano.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { DxCalendarComponent } from './components/dx-calendar/dx-calendar.compon
     StuhlComponent,
     RosenkorbComponent,
     DxCalendarComponent,
+    KameraComponent,
+    PianoComponent,
   ],
   imports: [
     BrowserModule,
