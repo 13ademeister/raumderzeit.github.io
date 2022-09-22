@@ -1,10 +1,30 @@
+::ng-deep .dx-widget {
+  background-color: var(--main-color) !important;
+  color: black;
+  font-family: futura-bold;
+  border: 1px solid black;
+}
+
 ::ng-deep .dx-scheduler-agenda-appointment-marker {
   background-color: var(--main-color) !important;
+  color: black;
 }
+
 ::ng-deep .dx-tooltip-appointment-item-marker-body {
   background-color: var(--main-color) !important;
+  color: black;
 }
+
 ::ng-deep .dx-scheduler-appointment {
   background-color: var(--main-color) !important;
   color: black;
+}
+
+::ng-deep .dx-scheduler-header-panel-cell {
+  border: 1px solid black;
+}
+
+::ng-deep .dx-scheduler-date-table-cell {
+  border: 1px solid black !important;
+  color: black !important;
 }
