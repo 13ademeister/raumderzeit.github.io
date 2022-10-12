@@ -6,14 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  // @HostListener('document:click', ['$event'])
-  // documentClick(event: MouseEvent) {
-  //   // your click logic
-  //   this.goBackToHome();
-  // }
-  title = 'rdzApp';
+  // default color "#eaff00";
+  primaryColor: string = '#eaff00';
 
-  goBackToHome() {
-    console.log('click');
+  // the secondary color is not yet used for all neccessary css attributes
+  // do not change color (black) before fixing this
+  secondaryColor: string = 'black';
+
+  title = 'Raum der Zeit';
+
+  constructor() {
+    this.changeTheme(this.primaryColor, this.secondaryColor); // Set default theme
+  }
+
+  changeTheme(primary: string, secondary: string) {
+    document.documentElement.style.setProperty('--primary-color', primary);
+    document.documentElement.style.setProperty('--secondary-color', secondary);
   }
 }

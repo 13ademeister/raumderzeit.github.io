@@ -147,7 +147,7 @@ Liebe Grüße,
   }
 
   routeObject(): boolean {
-    console.log(this.router.url);
+    // console.log(this.router.url);
     if (this.router.url.includes('/object')) return true;
     return false;
   }
@@ -180,4 +180,20 @@ Liebe Grüße,
     'mailto:kontakt@raum-der-zeit.de?subject=Veranstaltung organisieren&body=',
     this.eventInfosMailContent
   );
+
+  dblClickHome() {
+    const rainbowColors = [
+      '#9400D3',
+      '#4B0082',
+      '#0000FF',
+      '#00FF00',
+      '#eaff00',
+      '#FF7F00',
+      '#FF0000',
+      '#FF69B4',
+    ];
+    let randomColor =
+      rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
+    document.documentElement.style.setProperty('--primary-color', randomColor);
+  }
 }

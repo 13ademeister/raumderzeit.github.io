@@ -13,7 +13,6 @@ export class AllQrItemsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.objectId = params.get('id');
-      console.log(this.objectId);
     });
   }
 }
