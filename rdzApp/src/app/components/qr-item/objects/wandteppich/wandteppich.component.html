@@ -1,0 +1,17 @@
+<app-qr-item
+  [name]="'Wandteppich des ehemaligen Präsidenten der Fachhochschule Frankfurt am Main'"
+  [imageSrc]="'assets/images/wandteppich.jpg'"
+>
+  <strong>Wer hat diesen Gegenstand eingebracht? </strong><br />
+  Johey<br />
+  <br />
+  <strong>Was möchtest du zu deinem Gegenstand sagen?</strong>
+  <br />
+  <vm-player autoplay muted controls>
+    <vm-audio cross-origin>
+      <source data-src="assets/audio/wandteppich.ogg" type="audio/mp3" />
+    </vm-audio>
+  </vm-player>
+  <br />
+  <br />
+</app-qr-item>

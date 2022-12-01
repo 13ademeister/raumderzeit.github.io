@@ -35,7 +35,8 @@ import { DxButtonModule } from 'devextreme-angular';
 import { DxCalendarComponent } from './components/dx-calendar/dx-calendar.component';
 import { KameraComponent } from './components/qr-item/objects/kamera/kamera.component';
 import { PianoComponent } from './components/qr-item/objects/piano/piano.component';
-import { TuttiPaunsdorfComponent } from './components/qr-item/objects/stuhl copy/tutti-paunsdorf.component';
+import { TuttiPaunsdorfComponent } from './components/qr-item/objects/tutti-paunsdorf/tutti-paunsdorf.component';
+import { WandteppichComponent } from './components/qr-item/objects/wandteppich/wandteppich.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { TuttiPaunsdorfComponent } from './components/qr-item/objects/stuhl copy
     KameraComponent,
     PianoComponent,
     TuttiPaunsdorfComponent,
+    WandteppichComponent,
   ],
   imports: [
     BrowserModule,
