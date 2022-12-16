@@ -42,7 +42,7 @@ export class DefaultLinkComponent implements OnInit {
   `;
 
   simpleMail = this.convertToURI(
-    'mailto:kontakt@raum-der-zeit.de?subject=Cup in the Cap -->deine Cup Id<--&body=',
+    'mailto:kontakt@raum-der-zeit.de?subject=Cup Cap -->dein Cup Cap Link<--&body=',
     this.simpleMailContent
   );
 }
