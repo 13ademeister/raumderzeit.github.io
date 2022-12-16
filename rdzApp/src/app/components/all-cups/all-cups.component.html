@@ -1,0 +1,9 @@
+<ng-container [ngSwitch]="cupId">
+  <ng-container *ngSwitchCase="'raum-der-zeit'">
+    <app-raum-der-zeit></app-raum-der-zeit>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <app-default-link></app-default-link>
+  </ng-container>
+</ng-container>

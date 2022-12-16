@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainRoomComponent } from './components/main-room/main-room.component';
-import { WrongLinkComponent } from './components/qr-item/objects/wrong-link/wrong-link.component';
 
 // enum AllRoutes {
 //   idea,
@@ -19,6 +18,7 @@ const routes: Routes = [
   { path: 'questions', component: MainRoomComponent },
   // disable for web deployment
   { path: 'object/:id', component: MainRoomComponent },
+  { path: 'cup/:id', component: MainRoomComponent },
   { path: '**', redirectTo: '', component: MainRoomComponent },
 ];
 

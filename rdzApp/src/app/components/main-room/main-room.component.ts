@@ -147,8 +147,12 @@ Liebe Grüße,
   }
 
   routeObject(): boolean {
-    // console.log(this.router.url);
     if (this.router.url.includes('/object')) return true;
+    return false;
+  }
+
+  routeCup(): boolean {
+    if (this.router.url.includes('/cup')) return true;
     return false;
   }
 

@@ -202,10 +202,10 @@
       <br />
       <br />
       Einfache Sprache:<br />
-      Der Laden gehört zum Verein „Raum der Zeit e.V.“. Er besteht aus Menschen, die
-      im Osten von Leipzig wohnen. Wir mögen die Stimmung auf der Hedwigstraße
-      und wollen, dass hier noch mehr passiert. Du kannst den Ort unterstützen,
-      mit
+      Der Laden gehört zum Verein „Raum der Zeit e.V.“. Er besteht aus Menschen,
+      die im Osten von Leipzig wohnen. Wir mögen die Stimmung auf der
+      Hedwigstraße und wollen, dass hier noch mehr passiert. Du kannst den Ort
+      unterstützen, mit
       <a
         target="_blank"
         href="https://www.paypal.com/donate/?hosted_button_id=V2TUM4724X9GA"
@@ -305,6 +305,8 @@
     </app-item-content>
 
     <app-all-qr-items *ngIf="routeObject()"></app-all-qr-items>
+
+    <app-all-cups *ngIf="routeCup()"></app-all-cups>
 
     <div
       [class]="!isPortrait ? 'home' : 'home-portrait'"

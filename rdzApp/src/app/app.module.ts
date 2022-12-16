@@ -37,6 +37,8 @@ import { KameraComponent } from './components/qr-item/objects/kamera/kamera.comp
 import { PianoComponent } from './components/qr-item/objects/piano/piano.component';
 import { TuttiPaunsdorfComponent } from './components/qr-item/objects/tutti-paunsdorf/tutti-paunsdorf.component';
 import { WandteppichComponent } from './components/qr-item/objects/wandteppich/wandteppich.component';
+import { AllCupsComponent } from './components/all-cups/all-cups.component';
+import { DefaultLinkComponent } from './components/qr-item/objects/default-link/default-link.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { WandteppichComponent } from './components/qr-item/objects/wandteppich/w
     QrItemComponent,
     BuegelnBrettComponent,
     AllQrItemsComponent,
+    AllCupsComponent,
     WrongLinkComponent,
+    DefaultLinkComponent,
     BadezimmerFicusComponent,
     DagmarComponent,
     IdeenleuchteComponent,
