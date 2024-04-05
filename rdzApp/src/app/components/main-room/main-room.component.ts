@@ -106,19 +106,19 @@ Liebe Grüße,
 
   private eventInfosMailContent = `Hallo liebe Menschen vom Raum der Zeit,
 
-ich möchte gerne eine Veranstaltung in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:
+ich möchte gerne etwas in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:
 
-1. Wie soll die Veranstaltung heißen?
+1. Wie soll es heißen?
 -->Name: "Super-Mega-Event"
 
-2. Wann soll die Veranstaltung stattfinden?
+2. Wann soll das stattfinden?
 -->morgen / nächste Woche / am 30.02. / an einem Sonntag
 
 3. Ist das öffentlich oder privat?
 -->nur meine Oma darf kommen / die Stadt ist eingeladen
 
 4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit ein bisschen was spenden?
--->klar, kein Ding nen Fuffy ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen 10er für Strom und Wasser passt
+-->klar, kein Ding nen Hunni ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen Zwanni für Strom und Wasser geht immer
 
 5. Welche Frage fehlt hier noch bzw. was möchtest du noch dazu mitteilen?
 -->Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.
