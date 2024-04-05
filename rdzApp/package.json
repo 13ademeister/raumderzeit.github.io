@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm i & ng build",
-    "serve:build": "http-server docs/ --proxy http://192.168.0.3:8080?",
+    "build": "npm i --force & ng build",
+    "serve:build": "http-server docs/ --proxy http://192.168.0.93:8080?",
     "build-and-serve": "npm run build & npm run serve:build",
     "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de",
     "format": "prettier --write .  --ignore-path .gitignore",
