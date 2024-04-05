@@ -7,7 +7,7 @@
     "build": "npm i --force & ng build",
     "serve:build": "http-server docs/ --proxy http://192.168.0.93:8080?",
     "build-and-serve": "npm run build & npm run serve:build",
-    "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de",
+    "deploy:prod": "ng deploy --base-href=/ --cname=raum-der-zeit.de --no-silent",
     "format": "prettier --write .  --ignore-path .gitignore",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
