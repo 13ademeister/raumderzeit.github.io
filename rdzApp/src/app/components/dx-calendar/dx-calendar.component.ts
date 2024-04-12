@@ -14,8 +14,12 @@ export class DxCalendarComponent implements OnInit {
   dataSource: any;
 
   currentDate: Date = new Date();
+  startDate: Date;
 
   constructor(private http: HttpClient) {
+    console.log(this.currentDate);
+    this.startDate = new Date(this.currentDate.getTime() - 7 * 24 * 60 * 60 * 1000); 
+    console.log(this.startDate);
     locale(navigator.language);
 
     this.dataSource = new DataSource({
@@ -33,6 +37,8 @@ export class DxCalendarComponent implements OnInit {
       CALENDAR_ID,
       '/events?key=',
       PUBLIC_KEY,
+      '&timeMin=',
+      this.startDate.toISOString()
     ].join('');
 
     return this.http
