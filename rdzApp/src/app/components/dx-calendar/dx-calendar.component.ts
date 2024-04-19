@@ -27,7 +27,7 @@ export class DxCalendarComponent implements OnInit {
 
   private getData(options: any, requestOptions: any) {
     const PUBLIC_KEY = 'AIzaSyCHCizWWIPVrrBwCnd3rlAbY92u4HYamAs';
-    const CALENDAR_ID = 'vlrfhmscr09a89urrkm855908c@group.calendar.google.com';
+    const CALENDAR_ID = '8512a8ebb325202f37ce5ff5f9f35419c40bdb4d70702d407d401d3596dad0c2@group.calendar.google.com';
     const dataUrl = [
       'https://www.googleapis.com/calendar/v3/calendars/',
       CALENDAR_ID,
