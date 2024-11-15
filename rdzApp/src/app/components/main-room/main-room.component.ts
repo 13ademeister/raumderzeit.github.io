@@ -109,25 +109,26 @@ Liebe Grüße,
 ich möchte gerne etwas in eurem Raum organisieren und beantworte euch gerne ein paar Fragen dazu:
 
 1. Wie soll es heißen?
--->Name: "Super-Mega-Event"
+--> Name: "Super-Mega-Event"
 
 2. Wann soll das stattfinden?
--->morgen / nächste Woche / am 30.02. / an einem Sonntag
+--> morgen / nächste Woche / am 30.02. / an einem Sonntag
+(Ich habe natürlich vorher mal hier nachgeschaut, ob der Slot noch frei ist: https://raum-der-zeit.de/events)
 
 3. Ist das öffentlich oder privat?
--->nur meine Oma darf kommen / die Stadt ist eingeladen
+--> nur meine Oma darf kommen / die Stadt ist eingeladen
 
 4. Wer bezahlt denn Strom / Wasser und Miete? Könnt ihr dem Raum der Zeit ein bisschen was spenden?
--->klar, kein Ding nen Hunni ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen Zwanni für Strom und Wasser geht immer
+--> klar, kein Ding nen Hunni ist da locker drin / der Eintritt ist für euch / ist nur ein Plenum, aber nen Zwanni für Miete und Nebenkosten geht immer
 
 5. Welche Frage fehlt hier noch bzw. was möchtest du noch dazu mitteilen?
--->Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.
+--> Was ist der Sinn des Lebens? --> Die Antwort ist im Zweifel immer 42.
 
 Ich freue mich über eure Rückmeldung!
 
 Liebe Grüße,
 
--->dein Name
+--> dein Name
 `;
 
   public isPortrait = false;
