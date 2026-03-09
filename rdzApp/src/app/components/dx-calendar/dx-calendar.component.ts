@@ -29,11 +29,20 @@ export class DxCalendarComponent implements OnInit {
     const PUBLIC_KEY = 'AIzaSyCHCizWWIPVrrBwCnd3rlAbY92u4HYamAs';
     const CALENDAR_ID =
       '8512a8ebb325202f37ce5ff5f9f35419c40bdb4d70702d407d401d3596dad0c2@group.calendar.google.com';
+    
+    const threeMonthsAgo = new Date();
+      threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+    
     const dataUrl = [
       'https://www.googleapis.com/calendar/v3/calendars/',
       CALENDAR_ID,
-      '/events?key=',
+      '/events?',
+      'key=',
       PUBLIC_KEY,
+      '&singleEvents=true',
+      '&orderBy=startTime',
+      '&maxResults=2500',
+    '&timeMin=', threeMonthsAgo.toISOString()
     ].join('');
 
     return this.http
